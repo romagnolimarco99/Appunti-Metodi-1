@@ -1,0 +1,49 @@
+\chapter{Prodotto scalare e Spazi di Hilbert}
+
+\begin{definition}{Prodotto Scalare}
+\label{prod_scal}
+Prendiamo uno spazio vettoriale $V$. Un prodotto scalare 
+\begin{equation*}
+(\,,\,):V \times V \longmapsto \mathbb{C}
+\end{equation*}  
+
+è definito dalle seguenti proprietà:
+\begin{enumerate}
+\item $(v,v) \geq 0$ e $(v,v) = 0 \leftrightarrow v = 0$
+\item $(v,w)*=(w,v)$
+\item $(v,\lambda w) = \lambda(v,w)$
+\item $(v,w_1+w_2) = (v,w_1) + (v,w_2)$
+\end{enumerate} 
+
+\end{definition}
+
+Possiamo definire la seguente funzione $\norm{v}  = \sqrt{(v,v)}$ e dimostrare che è una norma.
+
+\begin{theorem}
+Sia $V$ uno spazio vettoriale con prodotto scalare $(,)$. Sia $\norm{v} = \sqrt{(v,v)}$. Allora $\norm{v}$ è una norma per cui, per ogni $v,w \in V$, vale la disuguaglianza di Cauchy-Schwarz \index{disuguaglianza di Cauchy}
+\begin{equation}
+\label{dis_sch}
+\abs{(v,w)} \leq \norm{v} \cdot \norm{w}.
+\end{equation} 
+\end{theorem}
+
+\begin{proof}
+Si vede immediatamente che $\norm{v}$ è una norma ben definita, grazie al fatto che il prodotto scalare è definito positivo per costruzione. \\
+Per cui $\norm{v - \lambda(v,w)w} \geq 0$ con $\lambda \in \mathbb{R}$. 
+Quindi
+\begin{gather*}
+(v - \lambda(v,w)w,v - \lambda(v,w)w) = \\
+=\norm{v}^2 - 2\lambda\abs{(v,w)}^2 +\lambda^2 \abs{(v,w)}^2 \norm{w}^2 \geq 0 .
+\end{gather*}
+
+Per cui
+\begin{align*}
+4\abs{(v,w)}\left(\abs{(v,w)}^2 - \norm{v}^2 \norm{w}^2\right) \leq 0
+\end{align*}
+
+da cui la disuguaglianza.\\
+
+
+\end{proof}
+
+Quindi uno spazio dotato di prodotto scalare è anche uno spazio normato. Se lo spazio è anche completo si chiama spazio di Hilbert $\left(\mathcal{H}\right)$. Un esempio di spazio di Hilbert è $\mathbb{C}^n$ con il prodotto scalare $(z,w) = \sqrt{\sum_i z_i^\ast w_i}$

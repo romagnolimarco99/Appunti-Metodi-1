@@ -1,0 +1,36 @@
+\chapter{Spazi Vettoriali}
+
+\begin{definition}{(vettori e spazi vettoriali)}
+
+I vettori sono, essenzialmente, oggetti che si possono "sommare e moltiplicare per scalari". Formalmente uno spazio vettoriale $V$ è un insieme dotato di una somma "$+$", sotto cui è un gruppo abeliano, e di una moltiplicazione con elementi di un campo $C$ compatibile con la somma di cui sopra. 
+
+\end{definition}
+
+Quindi dati $x,y \in V$ e $\lambda, \mu \in C$ vale che:
+
+\begin{enumerate}
+\item $x+y = y+x \in V$
+\item $\lambda x \in V$
+\item $\lambda(x+y) = \lambda x + \lambda y$
+\item $(\lambda + \mu)x = \lambda x + \mu x$
+\item $(\lambda \mu)x = \lambda (\mu x)$
+\end{enumerate} 
+
+Inoltre, dati $0,1 \in C$ allora $0 \cdot x = 0$ e $1 \cdot x = x$.
+
+Per noi il campo $C$ sarà sempre uno tra il campo dei numeri reali $\RR$ e quello dei numeri complessi $\CC$. Gli esempi più semplici di spazi vettoriali sono le n-ple di numeri. $\RR^n$ definito da tutti gli elementi del tipo $(x_1, x_2, \ldots , x_n)$ con $x_i \in \RR$, dove:
+
+\begin{itemize}
+\item $(x_1, x_2, \ldots , x_n) + (y_1, y_2, \ldots , y_n) = (x_1 + y_1, x_2 + y_2,\ldots, x_n + y_n)$;
+\item $\lambda (x_1, x_2, \ldots , x_n) = (\lambda x_1,\lambda x_2, \ldots , \lambda x_n)$.
+\end{itemize} 
+
+Analogamente si può definire $\CC^n$.\\
+
+Spesso (ma non sempre!) le "soluzioni di un problema" matematico o fisico formano uno spazio vettoriale. Ad esempio le soluzioni di un'equazione differenziale lineare come
+
+\begin{equation}
+\alpha(x) u''(x) + \beta(x) u'(x) + \gamma(x) u(x) = 0
+\end{equation}
+ 
+in cui, se $u_1(x)$ e $u_2$ sono soluzioni, anche $\lambda u_1(x) + \mu u_2(x)$ lo è, per ogni scelta di $\lambda, \mu \in \RR$ (o $\CC$). In questo caso si dice che il problema è lineare e soddisfa il "principio di sovrapposizione". Capita spesso che un problema generico (quindi non lineare) diventi lineare nell'approssimazione di piccole fluttuazioni attorno ad un punto di equilibrio.
