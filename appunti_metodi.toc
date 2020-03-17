@@ -1,0 +1,4 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Prodotto scalare e Spazi di Hilbert}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}cidcbsicbi}{7}{chapter.2}%
