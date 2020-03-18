@@ -1,9 +1,7 @@
 \chapter{Spazi Vettoriali}
 
 \begin{definition}{(vettori e spazi vettoriali)}
-
 I vettori sono, essenzialmente, oggetti che si possono "sommare e moltiplicare per scalari". Formalmente uno spazio vettoriale $V$ è un insieme dotato di una somma "$+$", sotto cui è un gruppo abeliano, e di una moltiplicazione con elementi di un campo $C$ compatibile con la somma di cui sopra. 
-
 \end{definition}
 
 Quindi dati $x,y \in V$ e $\lambda, \mu \in C$ vale che:
@@ -33,4 +31,40 @@ Spesso (ma non sempre!) le "soluzioni di un problema" matematico o fisico forman
 \alpha(x) u''(x) + \beta(x) u'(x) + \gamma(x) u(x) = 0
 \end{equation}
  
-in cui, se $u_1(x)$ e $u_2$ sono soluzioni, anche $\lambda u_1(x) + \mu u_2(x)$ lo è, per ogni scelta di $\lambda, \mu \in \RR$ (o $\CC$). In questo caso si dice che il problema è lineare e soddisfa il "principio di sovrapposizione". Capita spesso che un problema generico (quindi non lineare) diventi lineare nell'approssimazione di piccole fluttuazioni attorno ad un punto di equilibrio.
+in cui, se $u_1(x)$ e $u_2$ sono soluzioni, anche $\lambda u_1(x) + \mu u_2(x)$ lo è, per ogni scelta di $\lambda, \mu \in \RR$ (o $\CC$). In questo caso si dice che il problema è lineare e soddisfa il "principio di sovrapposizione". Capita spesso che un problema generico (quindi non lineare) diventi lineare nell'approssimazione di piccole fluttuazioni attorno ad un punto di equilibrio. Oppure ci sono casi in cui il principio di sovrapposizione vale in generale come in Elettromagnetismo o in Meccanica Quantistica.
+
+\begin{definition}{(lineare indipendenza)}
+Dati $n$ elementi $x_1, x_2, \ldots, x_n$ una generica combinazione lineare è $\lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_n x_n$. Se $\lambda_1 x_1 + \cdots \lambda_n x_n = 0$ implica $\lambda_i = 0 \forall i$ allora i vettori $x_i$ sono detti linearmente indipendenti. 
+\end{definition}
+
+\begin{definition}{(dimensione di uno spazio)}
+La dimensione di uno spazio $\dim{V}$ è definita dal numero massimo di vettori linearmente indipendenti che si trovano in esso. Se $\dim{V} = n$ con $n \in \NN$ allora lo spazio ha dimensione finita $n$. Se $\forall n \in \NN$ si possono trovare $n$ vettori linearmente indipendenti, allora si dice che lo spazio ha dimensione infinita.   
+\end{definition}
+
+Per ora ci limitiamo a ripassare alcune nozioni fondamentali sugli spazi a dimensione finita $\dim{V} = n$.
+
+\begin{definition}{(base di uno spazio)}
+Una base $y_1, y_2, \ldots , y_m$ di $V$ è un insieme di vettori linearmente indipendenti che genera $V$, cioè che ogni $x \in V$ può essere scritto come $x = \lambda_1 y_1 + \lambda_2 y_2 + \cdots + \lambda_m y_m$.
+\end{definition}
+
+\begin{theorem}
+Sia $V$ uno spazio vettoriale a dimensione finita con $\dim{V} = n$. Sia $y_1, y_2, \ldots , y_m$ una base di $V$, allora $m=n$.
+\end{theorem}
+
+\begin{proof}
+È ovvio che $m \leq n$ per definizione. Prendiamo $x_1, x_2, \ldots, x_n$ un insieme di vettori linearmente indipendenti. Dato che 
+\begin{equation*}
+x_1 = \lambda_1^{(1)} y_1 + \lambda_2^{(1)} y_2 + \cdots + \lambda_m^{(1)} y_m
+\end{equation*}
+ci sarà almeno un $i$ per cui $\lambda_i^{(1)} \neq 0$, per cui (senza perdita di generalità)
+\begin{equation*}
+y_1 = \frac{x_1}{\lambda_1^{(1)}} - \frac{\lambda_2^{(1)}}{\lambda_1^{(1)}} y_2 - \cdots - \frac{\lambda_m^{(1)}}{\lambda_1^{(1)}} y_m.
+\end{equation*} 
+Quindi $x_1, y_2, \ldots , y_m$ sono una nuova base per $V$. A questo punto si può iterare questo procedimento fino a creare una nuova base di $m$ vettori scelti fra gli $\{x_i\}$.Ma allora deve essere per forza $m=n$. 
+\end{proof}
+
+Se prendiamo $\RR^n$ una base è $e_i = (0, \ldots, 1, \ldots,0)$ con $1$ nella i-esima posizione. Infatti sono linearmente indipendenti e $\forall x \in \RR^n$ 
+\begin{equation*}
+(x_1, x_2, \ldots, x_n) = e_1 x_1 + e_2 x_2 + \cdots e_n x_n
+\end{equation*}
+Quindi generano $\RR^n$. Quindi $\dim{\RR^n} = n$.
