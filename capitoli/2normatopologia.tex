@@ -1,0 +1,54 @@
+\chapter{Norma e Topologia}
+Prendiamo uno spazio vettoriale $V$ su $\CC$ di dimensione arbitraria, non
+necessariamente finita. La discussione varrà anche per spazi definiti su
+$\RR$, basta trascurare *(il coniugio) quando compare. Ora equipaggiamo $V$
+con una norma.
+\begin{definition}{(norma e spazi normati)}
+Una \emph{norma} $\| \|: V \mapsto \RR$ è una funzione che ad ogni elemento
+$v \in V$ associa un numero reale $\|v\|$, da intendersi come una nozione di
+"lunghezza" di $v$. Deve generalizzare il concetto di modulo in $\CC$ 
+$\abs{z} = \sqrt{z^* z}$. Una \emph{norma}, per essere tale deve soddisfare le
+le seguenti proprietà:
+\begin{enumerate}[1)]
+	\item $\| v\| \geq 0$ e = si verifica $\iff v = 0$
+	\item $\| \lambda v \| = \abs{\lambda} \|v\|$
+	\item $\|v_1 + v_2\| \leq \|v_1\| + \|v_2\|$ (disuguaglianza triangolare)
+\end{enumerate}
+In questo caso $\left(V, \| \| \right)$ è uno \emph{spazio normato}.
+\end{definition}
+La norma introduce anche una \emph{metrica}, cioè una distanza fra due elementi
+$v_1, v_2$ definita da $d(v_1, v_2) = \|v_1 - v_2\|$. 
+\begin{definition}{(distanza e spazi metrici)}
+In genere uno \emph{spazio metrico} è un insieme, non necessariamente uno
+spazio vettoriale, in cui per ogni coppia di di elementi è definita una
+\emph{distanza} $d: V \times V \mapsto \RR$ tale che:
+\begin{enumerate}[1)]
+	\item $d(v_1, v_2) \geq 0$ e = si verifica $\iff v_1 = v_2$
+	\item $d(v_1, v_2) = d(v_2, v_1)$
+	\item $d(v_1, v_2) \leq d(v_1, v_3) + d(v_3, v_2)$
+\end{enumerate}
+\end{definition}
+Uno spazio normato $\left(V, \| \| \right)$ è quindi anche uno spazio metrico.
+\begin{align*}
+	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_2 - v_1\| = d(v_2, v_1) ;\\ 
+	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_1 - v_3 +v_3 -v_2 \| \leq
+	\|v_1 - v_3\| + \|v_3 - v_2\| = d(v_1, v_3) + d(v_3, v_2).
+\end{align*}
+Noi ci occuperemo sempre di spazi la cui metrica discende da una norma.
+Abbiamo già visto esempi di spazi normati in dimensione finita. Su $\CC^n$,
+$z = \left( z_1, z_2, \ldots, z_n \right)$, possiamo definire
+$\|z\| = \max_i \abs{z_i}$, per cui 1) e 2) sono ovvie, 3) discende da \[
+\|z + w\| = \max_i \abs{z_i + w_i} \leq \max_i \left(\abs{z_i} + \abs{w_i}\right)
+\leq \max_i \abs{z_i} + \max_i \abs{w_i} = \|z\| + \|w\|
+.\] 
+Oppure sempre su $\CC^n$ possiamo prendere $\|z\| = \sum_{i=1}^{n} \abs{z_i}$.
+Ancora 1) e 2) sono ovvie, mentre 3):
+\[
+	\|z + w\| = \sum_{i=1}^{n} \abs{z_i + w_i} \leq \sum_{i=1}^{n} \abs{z_i} +
+	\sum_{i=1}^{n} \abs{w_i} = \|z\| + \|w\|
+.\] 
+Vediamo ora alcuni esempi che generalizzano i casi sopra in dimensione
+infinita. Prendiamo le sequenze $z_i$ con $i \in \NN^+$ di numeri complessi.
+Quindi $z = \left( z_1, z_2, \ldots, z_n \ldots,  \right)$ limitiamoci alle
+sequenze limitate, cioè per cui $\sup_i \abs{z_i} < \infty$. Questo è uno
+spazio vettoriale e $\|z\| = \sup_i \abs{z_i}$ è una norma\footnote{forse max}.

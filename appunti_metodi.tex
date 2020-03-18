@@ -1,49 +1,7 @@
 \documentclass[italian,twoside,headinclude,10pt]{scrbook}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{calc}
-\usepackage{amsmath, amssymb, amsthm, thmtools, amsfonts}
-\usepackage{mathtools}
-\usepackage[nochapters,pdfspacing]{classicthesis}
-%\usepackage{hyperref}% clashes with classicthesis
-%\usepackage{fancyhdr}% clashes with classicthesis
-\usepackage{cleveref}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{geometry}
-\usepackage{float}
-\usepackage{mdframed}
-\usepackage{xcolor}
-\usepackage[italian]{babel}
-\usepackage{pgfplots}
-\usepackage{titling}
-\usepackage{url}
-\usepgfplotslibrary{external} 
-%\usepackage{imakeidx}
-\usepackage[separate-uncertainty=true]{siunitx}
-\usepackage{dsfont}
-\usepackage{wasysym}
-\tikzexternalize
 
-\newtheorem{theorem}{Teorema}[section]
-\newtheorem{corollary}{Corollario}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{definition}{Definition}[section]
-%\renewcommand\qedsymbol{$\smiley$}
-
-\newcommand{\abs}[1]{{\left|#1\right|}}
-\newcommand{\norm}[1]{{\|#1\|}}
-
-\newcommand{\CC}{\mathbb C}
-\newcommand{\HH}{\mathbb H}
-\newcommand{\KK}{\mathbb K}
-\newcommand{\NN}{\mathbb N}
-\newcommand{\QQ}{\mathbb Q}
-\newcommand{\RR}{\mathbb R}
-\newcommand{\TT}{\mathbb T}
-\newcommand{\ZZ}{\mathbb Z}
+\input{preamble}
+\input{math}
 
 \geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
 \sisetup{
@@ -55,10 +13,8 @@
 \author{Marco Romagnoli}
 \date{30/12/2019}
 %\makeindex
-%\pagestyle{fancy}
 
 \begin{document}
-
 \begin{titlepage}
 	\begin{center}
 		{\huge{Metodi Matematici I}}\\\vspace*{7mm}
@@ -72,13 +28,11 @@
 \end{titlepage}
 \makeatother
 \restoregeometry
-%\newpage
 
 \tableofcontents
 
-\vspace{2cm}
-
 \include{capitoli/1spazivettoriali}
+\include{capitoli/2normatopologia}
 \include{capitoli/3prodottoscalare}
 
 %\printindex
