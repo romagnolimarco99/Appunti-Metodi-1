@@ -10,11 +10,11 @@ $v \in V$ associa un numero reale $\|v\|$, da intendersi come una nozione di
 $\abs{z} = \sqrt{z^* z}$. Una \emph{norma}, per essere tale deve soddisfare le
 le seguenti proprietà:
 \begin{enumerate}[1)]
-	\item $\| v\| \geq 0$ e = si verifica $\iff v = 0$
-	\item $\| \lambda v \| = \abs{\lambda} \|v\|$
+	\item $\norm{v} \geq 0$ e = si verifica $\iff v = 0$
+	\item $\norm{\lambda v} = \abs{\lambda} \norm{v}$
 	\item $\|v_1 + v_2\| \leq \|v_1\| + \|v_2\|$ (disuguaglianza triangolare)
 \end{enumerate}
-In questo caso $\left(V, \| \| \right)$ è uno \emph{spazio normato}.
+In questo caso $\left(V, \norm{\cdot} \right)$ è uno \emph{spazio normato}.
 \end{definition}
 La norma introduce anche una \emph{metrica}, cioè una distanza fra due elementi
 $v_1, v_2$ definita da $d(v_1, v_2) = \|v_1 - v_2\|$. 
@@ -28,7 +28,7 @@ spazio vettoriale, in cui per ogni coppia di di elementi è definita una
 	\item $d(v_1, v_2) \leq d(v_1, v_3) + d(v_3, v_2)$
 \end{enumerate}
 \end{definition}
-Uno spazio normato $\left(V, \| \| \right)$ è quindi anche uno spazio metrico.
+Uno spazio normato $\left(V, \norm{\cdot} \right)$ è quindi anche uno spazio metrico.
 \begin{align*}
 	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_2 - v_1\| = d(v_2, v_1) ;\\ 
 	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_1 - v_3 +v_3 -v_2 \| \leq
