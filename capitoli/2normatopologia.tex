@@ -50,7 +50,7 @@ Ancora 1) e 2) sono ovvie, mentre 3):
 Vediamo ora alcuni esempi che generalizzano i casi sopra in dimensione
 infinita. Prendiamo le sequenze $z_i$ con $i \in \NN^+$ di numeri complessi.
 Quindi $z = \left( z_1, z_2, \ldots, z_n \ldots,  \right)$ limitiamoci alle
-sequenze limitate, cioè per cui $\sup_i \abs{z_i} < \infty$. Questo è uno
+sequenze limitate, cioè per cui $\displaystyle \sup_i \abs{z_i} < \infty$. Questo è uno
 spazio vettoriale e $\|z\| = \displaystyle \sup_i \abs{z_i}$ è una norma.
 Come prima si vede che
 \[
@@ -80,9 +80,9 @@ $\underline{v}$ può appartenere o meno ad $A$.
 Si denota con $\overline{A}$ la \emph{chiusura} di $A$, cioè l'unione di $A$ e
 di tutti i suoi punti di accumulazione, per cui vale $A \subset \overline{A}$.
 \end{definition}
-Prendiamo ora una funzione $f: A \subset V \to W$ dove $\left(V, \| \| \right)$ 
-e $\left(W, \| \| \right)$ sono entrambi dotati di norma e $A$ è il dominio
-della funzione $f$.
+Prendiamo ora una funzione $f: A \subset V \to W$ dove $\left(V, \| \cdot \| 
+\right)$ e $\left(W, \| \cdot \| \right)$ sono entrambi dotati di norma e $A$ è
+il dominio della funzione $f$.
 \begin{definition}[limite di una funzione]
 Prendiamo un $\underline{v}$ punto di accumulazione di $A$, si dice che 
 $\displaystyle \lim_{v \to \underline{v}} f(v) = w \in W$ se 
@@ -90,9 +90,9 @@ $\forall \delta > 0 \; \exists \eps > 0$ tale che $ \|v - \underline{v}\| <
 \eps$ e $v \neq \underline{v} \Rightarrow \|f(v) - w\| < \delta$.
 \end{definition}
 \begin{definition}[continuità puntuale]
-Nel caso in cui $\underline{v} \in A$ e $\lim_{v \to \underline{v}} = w =
-f(\underline{v})$ allora si dice che la funzione $f$ è \emph{continua in}
-$\underline{v}$.
+Nel caso in cui $\underline{v} \in A$ e $\displaystyle \lim_{v \to 
+\underline{v}} = w = f(\underline{v})$ allora si dice che la funzione $f$ è
+\emph{continua in} $\underline{v}$.
 \end{definition}
 \begin{definition}[continuità]
 Una funzione si dice \emph{continua} se è continua in ogni punto del proprio
@@ -102,12 +102,12 @@ dominio.
 Il limite di una funzione, se esiste, è unico.
 \end{theorem}
 \begin{proof}
-Supponiamo per assurdo $ \displaystyle \lim_{v \to \underline{v}} f(v) = w_1$
-e $\lim_{v \to \underline{v}} f(v) = w_2$ con $w_1 \neq w_2$. Per la 1)
-$\|w_1 - w_2\| = \alpha > 0$. Prendiamo $\delta < \frac{\alpha}{2}$ abbiamo
-che $\exists \eps > 0$ tale che $\|v - \underline{v}\| < \eps \Rightarrow
-\|f(v) - w_1\| < \frac{\alpha}{2}$ e $\|f(v) - w_2\| < \frac{\alpha}{2}$. Ora
-usando la 3):
+Supponiamo per assurdo $\displaystyle \lim_{v \to \underline{v}} f(v) = w_1$
+e $\displaystyle \lim_{v \to \underline{v}} f(v) = w_2$ con $w_1 \neq w_2$.
+Per la 1) $\|w_1 - w_2\| = \alpha > 0$. Prendiamo $\delta < \frac{\alpha}{2}$
+abbiamo che $\exists \eps > 0$ tale che $\|v - \underline{v}\| < \eps
+\Rightarrow \|f(v) - w_1\| < \frac{\alpha}{2}$ e $\|f(v) - w_2\| <
+\frac{\alpha}{2}$. Ora usando la 3):
 \[
 	\alpha = \|w_1 - w_2\| = \|w_1 - f(v) + f(v) - w_2\| \leq \|w_1 - f(v)\| +
 	\|f(v) - w_2\| < \alpha
@@ -116,14 +116,14 @@ Quindi $\alpha < \alpha$ il che non è possibile.
 \end{proof}
 Vediamo ora le successioni di elementi $v_i \in V$ con $i = 1,2, \ldots$
 \begin{definition}[limite di una successione]
-Si dice che $\displaystyle \lim_{i \to \infty} v_i = \underaccent{tilde}{v}$
+Si dice che $\displaystyle \lim_{i \to \infty} v_i = \underaccent{\tilde}{v}$
 se $\forall \delta > 0 \; \exists N$ tale che, se $i > N \Rightarrow
-\|\underaccent{\tilde}{v} - v_i\| < \delta$.
+\| \underaccent{\tilde}{v} - v_i\| < \delta$.
 \end{definition}
 \begin{theorem}[esistenza e unicità del limite]
 Sia $\underaccent{\tilde}{v}$ un punto di accumulazione di $A \subset V$,
 possiamo sempre trovare una successione $v_i \in A$ di elementi che ha
-$\displaystyle \lim_{i \to \infty} v_i = \underaccent{tilde}{v}$.
+$\displaystyle \lim_{i \to \infty} v_i = \underaccent{\tilde}{v}$.
 Il limite di una successione, se esiste, è unico.
 \end{theorem}
 \begin{proof}
@@ -131,10 +131,10 @@ Come prima per il limite di una funzione.
 \end{proof}
 \begin{definition}[successione di Cauchy]
 Una successione si dice \emph{di Cauchy} se $\forall \delta > 0 \; \exists N$
-tale che $\forall i, j > N \|v_i - v_j\| < \delta$.
+tale che $\forall i, j > N \quad \|v_i - v_j\| < \delta$.
 \end{definition}
 \begin{definition}[completezza]
-Uno spazio si dice completo se per ogni successione di Cauchy esiste un
+Uno spazio si dice \emph{completo} se per ogni successione di Cauchy esiste un
 $\underline{v}$ tale che $v_i$ converge a $\underline{v}$.
 \end{definition}
 \begin{definition}[spazio di Banach]
