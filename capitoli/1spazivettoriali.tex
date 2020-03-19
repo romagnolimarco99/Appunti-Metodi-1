@@ -67,4 +67,63 @@ Se prendiamo $\RR^n$ una base è $e_i = (0, \ldots, 1, \ldots,0)$ con $1$ nella 
 \begin{equation*}
 (x_1, x_2, \ldots, x_n) = e_1 x_1 + e_2 x_2 + \cdots e_n x_n
 \end{equation*}
-Quindi generano $\RR^n$. Quindi $\dim{\RR^n} = n$.
+Quindi generano $\RR^n$. Quindi $\dim{\RR^n} = n$. Se prendiamo $\CC^n$ la sua dimensione come spazio vettoriale come spazio vettoriale sul campo $\CC$ è $\dim_\CC{\CC^n} = n$. In questo caso omettiamo il $ \CC$ e scrivere semplicemente $\dim{\CC^n} =  n$. Come spazio vettoriale nel campo dei reali invece $\dim_\RR{\CC^n} = 2n$, dove una possibile base è $e_j^1 = (0,\ldots,1,\ldots,0), \; e_j^2 = (0,\ldots,i,\ldots,0)$ con $1 \geq j \leq n$. 
+
+\begin{definition}{(sottospazio vettoriale)}
+Se abbiamo $m<n$ vettori linearmente indipendenti $y_1, y_2, \ldots , y_m$ in uno spazio vettoriale $V$ con $\dim	{V} = n$, allora l'insieme di tutte le combinazioni lineari $\lambda_1 y_1 + \lambda_2 y_2 + \cdots + \lambda_m y_m$ è un sottospazio vettoriale $V' \subset V$ con $\dim{V'}$.
+\end{definition}
+
+Data una base $x_1, x_2, \ldots, x_n$ di elementi di $V$ possiamo fare un isomorfismo fra $V$ e $\RR^n$. Dato un $x \in V$ lo scriviamo in modo univoco come $x = $ ed associamo 
+\begin{equation*}
+x \in V \longleftrightarrow (\lambda_1, \lambda_2, \ldots, \lambda_n) \in \RR^n.
+\end{equation*}
+Tutti gli spazi vettoriali di dimensione finita su $\RR$ ($\CC$) sono isomorfi a $\RR^n$ ($\CC^n$) dove $n$ è la loro dimensione. Ovviamente l'isomorfismo richiede la scelta preliminare di una base.
+
+\begin{definition}{(applicazione lineare)}
+Dati due spazi vettoriali $V$, $\dim{V} = n$, e $W$, $\dim{W} = m$, un'applicazione lineare è una funzione 
+\begin{align*}
+A : V \longrightarrow W
+\end{align*} 
+che rispetta la struttura lineare
+\begin{equation*}
+A(\lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_n x_n) = \lambda_1 A(x_1) + \lambda_2 A(x_2) + \cdots + \lambda_n A(x_n).
+\end{equation*}
+\end{definition}
+\begin{proposition}
+Sia $e_1, e_2, \ldots, e_n$ una base di uno spazio vettoriale $V$. La conoscenza di $A$ sugli elementi della base implica la conoscenza di $A$ su tutto lo spazio.
+\end{proposition}
+
+\begin{proof}
+Se $x = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n \; \forall x \in V$, allora $A(x) = A(\lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n) = \lambda_1 A(e_1) + \lambda_2 A(e_2) + \cdots + \lambda_n (e_n)$.
+\end{proof} 
+Se prendiamo una base $e_1, e_2, \ldots, e_n$ di $V$ e una base $f_1, f_2, \ldots, f_m$ di $W$, allora possiamo tradurre $A$ in un'applicazione lineare fra $\RR^n \rightarrow \RR^m$ quindi scriverla in forma matriciale
+\begin{equation*}
+\begin{pmatrix}
+\mu_1 \\
+\mu_2 \\
+\vdots \\
+\mu_m
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+\end{pmatrix}
+\begin{pmatrix}
+\lambda_1 \\
+\lambda_2 \\
+\vdots \\
+\lambda_n
+\end{pmatrix}
+\end{equation*}
+Ogni $A(e_i)$ può essere scomposto nella base $\{f_j\}$
+\begin{equation*}
+A(e_i) = \sum_j{a_{j,i} f_j} \\
+\end{equation*}
+Quindi
+\begin{equation*}
+A(x) = \sum_i{\lambda_i A(e_i)} = \sum_i\sum_j{\lambda_i a_{j,i} f_j} = \sum_j{\mu_j f_j}
+\end{equation*}
+Dal seguente prodotto si ottiene un vettore in $\RR^m$, che corrisponde ad $A(x)$ nella base $\{f_j\}$.
