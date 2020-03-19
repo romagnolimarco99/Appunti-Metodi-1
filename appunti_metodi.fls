@@ -89,8 +89,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bezos/accents.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bezos/accents.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/classicthesis/classicthesis.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/classicthesis/classicthesis.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/latexrelease.sty
@@ -387,6 +385,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bezos/accents.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bezos/accents.sty
 OUTPUT appunti_metodi.auxlock
 INPUT math.tex
 INPUT math.tex
