@@ -14,7 +14,7 @@ le seguenti proprietà:
 	\item $\norm{\lambda v} = \abs{\lambda} \norm{v}$
 	\item $\|v_1 + v_2\| \leq \|v_1\| + \|v_2\|$ (disuguaglianza triangolare)
 \end{enumerate}
-In questo caso $\left(V, \norm{\cdot} \right)$ è uno \emph{spazio normato}.
+In questo caso $\left(V, \norm{\;} \right)$ è uno \emph{spazio normato}.
 \end{definition}
 La norma introduce anche una \emph{metrica}, cioè una distanza fra due elementi
 $v_1, v_2$ definita da $d(v_1, v_2) = \|v_1 - v_2\|$. 
@@ -28,7 +28,7 @@ spazio vettoriale, in cui per ogni coppia di di elementi è definita una
 	\item $d(v_1, v_2) \leq d(v_1, v_3) + d(v_3, v_2)$
 \end{enumerate}
 \end{definition}
-Uno spazio normato $\left(V, \norm{\cdot} \right)$ è quindi anche uno spazio metrico.
+Uno spazio normato $\left(V, \norm{\;} \right)$ è quindi anche uno spazio metrico.
 \begin{align*}
 	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_2 - v_1\| = d(v_2, v_1) ;\\ 
 	&d(v_1, v_2) = \|v_1 - v_2\| = \|v_1 - v_3 +v_3 -v_2 \| \leq
@@ -50,8 +50,8 @@ Ancora 1) e 2) sono ovvie, mentre 3):
 Vediamo ora alcuni esempi che generalizzano i casi sopra in dimensione
 infinita. Prendiamo le sequenze $z_i$ con $i \in \NN^+$ di numeri complessi.
 Quindi $z = \left( z_1, z_2, \ldots, z_n \ldots,  \right)$ limitiamoci alle
-sequenze limitate, cioè per cui $\displaystyle \sup_i \abs{z_i} < \infty$. Questo è uno
-spazio vettoriale e $\|z\| = \displaystyle \sup_i \abs{z_i}$ è una norma.
+sequenze limitate, cioè per cui $\ds \sup_i \abs{z_i} < \infty$. Questo è uno
+spazio vettoriale e $\|z\| = \ds \sup_i \abs{z_i}$ è una norma.
 Come prima si vede che
 \[
 	\|z + w \| = \sup_i \abs{z_i + w_i} \leq \sup_i \left(\abs{z_i} + \abs{w_i}
@@ -64,7 +64,7 @@ $\|z\| = \sum_{i} \abs{z_i}$.
 Vediamo altri esempi usando spazi funzionali. Prendiamo l'insieme delle
 funzioni continue su un intervallo chiuso $f \in C\left( [a, b] \right)$,
 $f: [a, b] \to \CC$. Questo è uno spazio vettoriale e su di esso possiamo
-prendere, ad esempio: $\|f\| = \displaystyle \max_{x \in [a, b]} \abs{f(x)}$,
+prendere, ad esempio: $\|f\| = \ds \max_{x \in [a, b]} \abs{f(x)}$,
 oppure $\|f\| = \int_a^b \abs{f(x)} \ud x$.
 Consideriamo ora gli aspetti topologici, cioè le nozioni di limite e continuità
 che la norma induce sugli spazi.
@@ -80,17 +80,17 @@ $\underline{v}$ può appartenere o meno ad $A$.
 Si denota con $\overline{A}$ la \emph{chiusura} di $A$, cioè l'unione di $A$ e
 di tutti i suoi punti di accumulazione, per cui vale $A \subset \overline{A}$.
 \end{definition}
-Prendiamo ora una funzione $f: A \subset V \to W$ dove $\left(V, \| \cdot \| 
-\right)$ e $\left(W, \| \cdot \| \right)$ sono entrambi dotati di norma e $A$ è
+Prendiamo ora una funzione $f: A \subset V \to W$ dove $\left(V, \| \; \| 
+\right)$ e $\left(W, \| \; \| \right)$ sono entrambi dotati di norma e $A$ è
 il dominio della funzione $f$.
 \begin{definition}[limite di una funzione]
 Prendiamo un $\underline{v}$ punto di accumulazione di $A$, si dice che 
-$\displaystyle \lim_{v \to \underline{v}} f(v) = w \in W$ se 
+$\ds \lim_{v \to \underline{v}} f(v) = w \in W$ se 
 $\forall \delta > 0 \; \exists \eps > 0$ tale che $ \|v - \underline{v}\| <
 \eps$ e $v \neq \underline{v} \Rightarrow \|f(v) - w\| < \delta$.
 \end{definition}
 \begin{definition}[continuità puntuale]
-Nel caso in cui $\underline{v} \in A$ e $\displaystyle \lim_{v \to 
+Nel caso in cui $\underline{v} \in A$ e $\ds \lim_{v \to 
 \underline{v}} = w = f(\underline{v})$ allora si dice che la funzione $f$ è
 \emph{continua in} $\underline{v}$.
 \end{definition}
@@ -102,8 +102,8 @@ dominio.
 Il limite di una funzione, se esiste, è unico.
 \end{theorem}
 \begin{proof}
-Supponiamo per assurdo $\displaystyle \lim_{v \to \underline{v}} f(v) = w_1$
-e $\displaystyle \lim_{v \to \underline{v}} f(v) = w_2$ con $w_1 \neq w_2$.
+Supponiamo per assurdo $\ds \lim_{v \to \underline{v}} f(v) = w_1$
+e $\ds \lim_{v \to \underline{v}} f(v) = w_2$ con $w_1 \neq w_2$.
 Per la 1) $\|w_1 - w_2\| = \alpha > 0$. Prendiamo $\delta < \frac{\alpha}{2}$
 abbiamo che $\exists \eps > 0$ tale che $\|v - \underline{v}\| < \eps
 \Rightarrow \|f(v) - w_1\| < \frac{\alpha}{2}$ e $\|f(v) - w_2\| <
@@ -116,14 +116,14 @@ Quindi $\alpha < \alpha$ il che non è possibile.
 \end{proof}
 Vediamo ora le successioni di elementi $v_i \in V$ con $i = 1,2, \ldots$
 \begin{definition}[limite di una successione]
-Si dice che $\displaystyle \lim_{i \to \infty} v_i = \utld{v}$
+Si dice che $\ds \lim_{i \to \infty} v_i = \utld{v}$
 se $\forall \delta > 0 \; \exists N$ tale che, se $i > N \Rightarrow
 \| \utld{v} - v_i\| < \delta$.
 \end{definition}
 \begin{theorem}[esistenza e unicità del limite]
 Sia $\utld{v}$ un punto di accumulazione di $A \subset V$,
 possiamo sempre trovare una successione $v_i \in A$ di elementi che ha
-$\displaystyle \lim_{i \to \infty} v_i = \utld{v}$.
+$\ds \lim_{i \to \infty} v_i = \utld{v}$.
 Il limite di una successione, se esiste, è unico.
 \end{theorem}
 \begin{proof}
@@ -141,12 +141,139 @@ $\underline{v}$ tale che $v_i$ converge a $\underline{v}$.
 Uno spazio normato e completo si chiama \emph{spazio di Banach}.
 \end{definition}
 
-Vediamone alcuni esempi. Prendiamo $\CC^n$ con la norma $\displaystyle \max_i
+Vediamone alcuni esempi. Prendiamo $\CC^n$ con la norma $\ds \max_i
 \abs{z_i}$ e la successione $z^j =  \left(z_1^j, z_2^j, \ldots, z_n^j \right)$
 dove $j = 1, 2, \ldots, \infty$ di Cauchy. Si vede che se $z^j$ è di Cauchy,
 le $n$ singole successioni in $\CC$ $z_i^j$ sono di Cauchy e, per la
 completezza di $\CC$ convergono $z_i^j \to w_i$.
 Ora prendiamo $w = \left(w_1, w_2, \ldots, w_n \right)$ e verifichiamo che
-$\displaystyle \lim_{j \to \infty} z^j = w$. Quindi dalla completezza di $\CC$ 
-discende la completezza di $\CC^n$ con la norma vista sopra. Vedremo che su
-$\CC^n$ questo vale per qualsiasi norma.
+$\ds \lim_{j \to \infty} z^j = w$.
+
+Quindi dalla completezza di $\CC$ discende la completezza di $\CC^n$ con
+la norma vista sopra. Vedremo che su $\CC^n$ questo vale per qualsiasi norma.
+\begin{example}[norma uniforme]
+Prendiamo lo spazio $C([a, b])$ con la norma 
+$\|f\| = \ds \max_{x \in [a, b]} \abs{f(x)}$.
+Questa è la norma della convergenza uniforme. Se $f_n$ è di Cauchy lo sono
+anche tutte le successioni $f_n(x)$ e quindi abbiamo una funzione $f(x)$ a
+cui $f_n(x)$ convergono puntualmente $\ds \lim_{n \to \infty} f_n(x) = f(x)\;
+\forall x$.
+
+Ma la convergenza è anche uniforme, non solo puntuale, infatti 
+$\delta' < \delta \;$, $i,j>N$ $\|f_i-f_j\|<\delta'$ mandando $f\to 0$
+abbiamo per $i>N$ $\|f_i-f\|\leq \delta'<\delta$. Siccome la convergenza è
+uniforme $f(x)$ è anch'essa continua, quindi lo spazio $C([a,b])$ con
+la norma $\ds \max_{x}\abs{f(x}|$ è completo, cioè uno spazio di Banach.
+\end{example}
+\begin{example}[spazio non completo]
+	
+Prendiamo ora sempre $C([a, b])$ ma con $\|f\| = \int_{a}^b \abs{f(x)} \ud x$.
+Se prendiamo come esempio di successione
+\[
+f_n(x)=\begin{cases}
+0 \qquad &a\leq x \leq c - 1/n\\
+\frac{n}{2}(x - c + 1/n) \qquad &c - 1/n \leq x \leq c + 1/n\\
+1 \qquad &c + 1/n \leq x \leq b
+\end{cases}
+\]
+sono tutte funzioni continue. $f_n(x)$ converge puntualmente a
+\[
+f(x) = \begin{cases}
+0 \qquad &a \leq x \leq c\\
+\frac{1}{2} \qquad &x = c\\
+1 \qquad &c < x \leq b
+\end{cases}
+\]
+dove $f(x)$ chiaramente non appartiene a $C([a, b])$. La funzione converge in norma
+\[
+\|f(x) - f_n(x)\| = 2\int_{c - 1/n}^c \frac{n}{2} \left(x - c + \frac{1}{n}\right)
+\ud x = \frac{1}{2nr} \to 0
+\]
+per $n \to \infty$. Quindi la successione è di Cauchy, ma non converge ad un elemento di
+$C([a, b])$, per cui lo spazio non è completo.
+\end{example}
+
+\begin{definition}[norme equivalenti]
+Due norme $\|\;\|_1$ e $\|\;\|_2$ sullo stesso spazio $V$ si dicono \emph{equivalenti}
+se esistono $k, K > 0$ tali che $\forall v \in V$ 
+\[
+	k\|v\|_1\leq \|v\|_2\leq K\|v\|_1
+.\]
+\end{definition}
+
+\begin{lemma}
+Se due norme sono equivalenti lo sono anche le nozioni topologiche che da
+esse derivano.
+\end{lemma}
+\begin{proof}
+Prendiamo ad esempio una successione $v_n\in V$ tale che
+$\lim_{n\to \infty}v_n=v$ con la norma $\|\;\|_1$, allora lo stesso deve
+essere valido per la norma $\|\;\|_2$. Per definizione vogliamo che
+$\forall \delta>0$ $\exists N$ tale che $\|v-v_i\|_2<\delta$ per $i>N$.
+Sappiamo che $\forall \delta/K$ $\exists n$ tale che $\|v-v_i\|_1<\delta/K$.
+Ma $\|v-v_i\|_2\leq K\|v-v_i\|_1<\delta$. Per dimostrare l'inverso usiamo
+$\|v\|_1<\frac{1}{k}\|v\|_2$.
+Con ragionamenti analoghi si vede che tutte le altre nozioni topologiche
+(limite, continuità,\ldots) sono equivalenti per norme equivalenti.
+\end{proof}
+Più in generale abbiamo che in dimensione finita tutte le norme sono
+equivalenti, per cui per trovare controesempi di norme non equivalenti
+dobbiamo guardare agli spazi infiniti.
+\begin{example}[norme non equivalenti]
+	
+Le norme $\|f\|_1=max|f(x)|$ e $\|f\|_2=\int_{a}^b|f(x)dx$ non possono essere
+equivalenti. Ad esempio:
+\[
+f_n(x)=\begin{cases}
+0 \qquad &0 \leq x \leq c - 1/n\\
+n(x-c+1/n) \qquad &c - 1/n \leq x \leq c\\
+n(-x+c+1/n)\qquad &c \leq x \leq c + 1/n\\
+0\qquad &c + 1/n \leq x \leq b
+\end{cases}
+\]
+abbiamo $\|f_n\|_1=1$ $\forall n$ mentre $\|f_n\|_2=1/n\to 0$ per
+$n\to \infty$ quindi non può esistere $k$ tale che
+$\|f_n\|_1\leq k \|f_n\|_2$ $\forall n$.
+\end{example}
+
+Vediamo altre nozioni di topologia.\\
+\begin{definition}[Palla aperta]
+Dato un elemento $v \in V$, definiamo $B(v,R) \subset V$, la \emph{palla aperta}
+di raggio $R$ attorno a $v$ come l'insieme degli elementi $w \in V$ tali
+che $\|v-w\| < R$. 
+\end{definition}
+
+\begin{definition}[Palla chiusa]
+$\overline{B(v,R)}$ è la \emph{palla chiusa} data dagli elementi
+per cui $\|v-w\| \leq R$.
+\end{definition}
+
+\begin{definition}[aperto]
+Un insieme $A \subset V$ è \emph{aperto} se per ogni suo elemento $v\in A$
+esiste un $\delta$ tale che l'intera palla aperta $B(v, \delta)$ è contenuta
+in $A$.
+\end{definition}
+
+\begin{definition}[chiuso]
+Un insieme $C \subset V$ è \emph{chiuso} se il suo complementare è aperto.
+\end{definition}
+
+\begin{theorem}
+La palla aperta è un insieme aperto.
+\end{theorem}
+\begin{proof}
+Dato $w$ con $\|w-v\|=r<R$, prendiamo
+$\delta < R-r$, se $t \in B(w, \delta)$, $\|t-w\| < \delta$. Quindi $\|t-v\|
+\leq \|z-w\| + \|w-v\| = \delta +r < R$ quindi $t \in B(v,R)$. 
+\end{proof}
+In maniera analoga si dimostra che $\overline{B(v,R)}$ è chiuso.
+\begin{theorem}
+Un insieme è chiuso $\iff$ contiene tutti i suoi punti di accumulazione:
+$C = \overline{C}$.
+\end{theorem}
+\begin{proof}
+Se $v \notin C$ allora $v \in C^c$ cioè $v$ appartiene al
+complementare. Essendo $C^c$ aperto esiste una palla attorno a $v$ in cui
+nessun elemento appartiene a $C$, quindi $v$ non può essere un punto di
+accumulazione di $C$.
+\end{proof}
