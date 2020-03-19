@@ -1,5 +1,5 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {chapter}{\numberline {1}Spazi Vettoriali}{5}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Norma e Topologia}{7}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Prodotto scalare e Spazi di Hilbert}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {2}Norma e Topologia}{9}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Prodotto scalare e Spazi di Hilbert}{13}{chapter.3}%
