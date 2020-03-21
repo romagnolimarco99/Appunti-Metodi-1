@@ -4,7 +4,7 @@ necessariamente finita. La discussione varrà anche per spazi definiti su
 $\RR$, basta trascurare *(il coniugio) quando compare. Ora equipaggiamo $V$
 con una norma.
 \begin{definition}[(norma e spazi normati)]
-Una \emph{norma} $\| \|: V \mapsto \RR$ è una funzione che ad ogni elemento
+Una \emph{norma} $\| \; \|: V \mapsto \RR$ è una funzione che ad ogni elemento
 $v \in V$ associa un numero reale $\|v\|$, da intendersi come una nozione di
 "lunghezza" di $v$. Deve generalizzare il concetto di modulo in $\CC$ 
 $\abs{z} = \sqrt{z^* z}$. Una \emph{norma}, per essere tale deve soddisfare le
@@ -277,3 +277,241 @@ complementare. Essendo $C^c$ aperto esiste una palla attorno a $v$ in cui
 nessun elemento appartiene a $C$, quindi $v$ non può essere un punto di
 accumulazione di $C$.
 \end{proof}
+Se $A_i$ sono insiemi aperti, $\bigcup_i A_i = A$ è ancora aperto. Nota che
+il numero degli $A_i$ può anche essere infinito numerabile. 
+$\bigcap_{i = 1}^n A_i = A$ è aperto. Per l'intersezione potrebbero esserci
+casi in cui un'intersezione di infiniti insiemi aperti non produce un aperto.
+Dalle formule di De Morgan $(\bigcup_i A_i)^c = \bigcap_i A_i^c$ si deducono
+formule analoghe per i chiusi; ora è l'intersezione che può essere infinita
+numerabile. $\bigcap_i C_i = C$ è chiuso se $C_i$ sono chiusi; 
+$\cup_{i=1}^n C_i = C$ è chiuso se lo sono i $C_i$.
+
+\begin{definition}[compatto]
+Un insieme $W$ è \emph{compatto} se per ogni successione $v_i\in W$ si può
+estrarre una sottosuccessione $v_{i_{(j)}}$ che converge ad un punto di $W$,
+$\lim_{j \to \infty} v_{i_{(j)}} = w \in W$.
+\end{definition}
+
+Un insieme compatto contiene tutti i suoi punti di accumulazione ed
+è necessariamente chiuso.
+
+\begin{definition}[limitato]
+Un insieme è \emph{limitato} se esiste $k$ tale che $\|v\| < k$ per ogni
+suo elemento.
+\end{definition}
+
+\begin{lemma}[compatto $\implies$ limitato]
+Un insieme compatto è necessariamente limitato.
+\end{lemma}
+\begin{proof}
+Se non lo fosse potremmo avere una successione tale che $\|v_n\| > n$, non
+può quindi esistere un punto di accumulazione dei $\|v_n\|$ e quindi nemmeno
+una sottosuccessione dei $v_n$ convergente.
+\end{proof}
+\begin{corollary}
+Un insieme chiuso contenuto in un compatto è necessariamente compatto.
+\end{corollary}
+
+\section{Teorema di Weierstrass}
+Vediamo ora l'importante Teorema di Weierstrass:
+\begin{theorem}[di Weierstrass]
+Sia $f: C \to W$ con $C \subset V$ compatto. Se $f$ è continua, allora
+$\|f\|$ assume un massimo e un minimo in $C$.
+\end{theorem}
+\begin{proof}
+Sia $\ds M = \sup_{v \in C} \|f(v)\|$. Per definizione di sup esiste una
+successione $v_i$: $i = 1, \ldots, \infty$ tale che 
+$ \ds \lim_{i \to \infty} \|f(v_i)\| = M$. Ma per la compattezza esiste
+una sottosuccessione $v_{i_{(j)}}$ tale che 
+$\ds \lim_{j \to \infty} v_{i_{(j)}} = w$ con $w \in C$.
+Per la continuità $\ds \lim_{j \to \infty} f(v_{i_{(j)}}) = f(w)$ e quindi
+deve essere $ \ds \|f(w)\| = \lim_{j \to \infty} \|f(v_{i_{(j)}})\| = M$
+per la continuità della funzione norma. Quindi il sup è anche un max. 
+\end{proof}
+È facile trovare esempi in cui l'assenza di compattezza e/o continuità
+invalidano l'esistenza del max (o del min).
+Abbiamo usato la continuità della funzione norma.
+\begin{proof}
+Per verificarlo basta prendere $\|v\|=\|v-v_i+v_i\| \leq \|v-v_i\|+\|v_i\|$
+insieme a $\|v_i\| = \|v_i - v + v\| \leq \|v - v_i\| + \|v\|$ quindi
+$\abs{\|v\| - \|v_i\|} \leq \|v-v_i\|$. Per cui se 
+$\ds \lim_{v \to v_i} v_i = v$ si ha anche
+$\ds \lim_{v \to v_i} \|v_i\| = \|v\|$.
+\end{proof}
+
+\begin{definition}[L-lipschitzianità]
+In genere una funzione $f:V \to W$ è detta \emph{L-lipschitziana} se esiste
+un $L$ tale che $\|f(v) - f(w)\| \leq L\|v-w\| \quad \forall$ coppia $v,w$.
+\end{definition}
+
+Le funzioni lipschitziane sono una sottoclasse di quelle continue.
+\begin{example}[lipschitziana]
+La funzione norma $\| \; \|: V \to \RR$ è L-lipschitziana con $L = 1$.
+\end{example}
+
+Possiamo ora enunciare il seguente
+\begin{theorem}[equivalenza delle norme]
+In spazi a dimensione finita tutte le norme sono equivalenti sono equivalenti
+e quindi inducono la stessa topologia.
+\end{theorem}
+\begin{proof}
+Prendiamo una base $e_1, \ldots, e_n$ che manda lo spazio in $\CC^n$.
+Poi prendiamo una norma di riferimento, ad esempio 
+$\ds \|z\|_1 = \max_i \abs{z_i}$. Dimostreremo che ogni altra norma $\| \; \|_2$ 
+è equivalente a $\| \; \|_1$. $\overline{B(0, 1)} = 
+\left\{v: \|v\|_1 \leq 1 \right\} $ è chiuso, 
+$\overline{{B(0, 1)}^c} = \left\{v: \|v\|_1 \geq 1 \right\} $ è pure chiuso,
+quindi
+\[
+S(0, 1) := \left\{v: \|v\|_1 = 1\right\} = 
+\overline{B(0, 1)} \cap \overline{{B(0,1)}^c}
+.\] 
+è pure chiuso perché intersezione di chiusi.
+Un insieme chiuso e limitato in $\CC^n$ con la norma $\| \; \|_1$ è anche
+compatto. Se $z^i = \left(z_1^i, \ldots, z_n^i \right)$ è una successione
+limitata lo sono anche tutte le $z_j^i$ in $\CC$. Quindi per ciascuna possiamo
+estrarre una sottosuccessione convergente $z_1^{i_{(j)}} \to w_1$ ad un
+elemento dell'insieme per $j \to \infty$. Quindi estraiamo una
+sottosuccessione per cui converge anche $z_2^{i_{(j_{(t)})}} \to w_2$ e così
+via \ldots. Alla fine abbiamo una sottosuccessione 
+$z^{i_{(j)}} \to w = \left(w_1, \ldots, w_n \right)$. Convergendo 
+$z_k^{i_{(j)}} \to w_k$ singolarmente, converge anche $z^{i_{(j)}} \to w$
+nella norma $\| \; \|_1$.
+Ora dobbiamo mostrare che ogni norma $\| \; \|_2$ è lipschitziana, e quindi
+continua, rispetto a $\| \; \|_1$.
+\begin{align*}
+\|z\|_2 &= \|z_1e_1 + z_2e_2 + \ldots + z_ne_n\|_2 
+\leq \abs{z_1}\|e_1\|_2 + \abs{z_2}\|e_2\|_2 + \ldots + \abs{z_n}\|e_n\|_2 \\
+&\leq n \max_i \left(\abs{z_1}\|e_1\|_2 \right) 
+\leq n \max_i \abs{z_i} \max_i \|e_i\|_2 = n \|z\|_1 \max_i \|e_i\|_2 
+\end{align*}
+Quindi qualsiasi norma $\| \; \|_2$ è $K$-lipschitziana con 
+$\ds K = n \max_i \|e_i\|_2$.
+Restringiamo $\| \; \|_2 : S(0, 1) \to \RR$, questa è una funzione continua
+su un compatto, dunque assume un massimo e un minimo $M$ e $m \; > 0$.
+Ora prendiamo un $v$ generico e $\utld{v} = \frac{v}{\|v\|}$, dove 
+$\|\utld{v}\| = 1$,\\
+$\|v\|_2 = \| \|v\|_1 \; \utld{v} \| = \|v\|_1 \|\utld{v}\|_2 \;$ siccome
+$\utld{v} \in S(0, 1)$:
+\[
+m \|v\|_1 \leq \|v\|_2 \leq M \|v\|_1
+.\] 
+Quindi $\| \; \|_2$ e $\| \; \|_1$ sono norme equivalenti.
+\end{proof}
+\begin{corollary}
+In particolare, visto che in dimensione finita tutte le norme sono
+equivalenti, un chiuso e limitato è sempre compatto (se lo è per 
+$\| \; \|_1$ lo è per tutte).
+\end{corollary}
+
+Inoltre, $\CC^n$, con qualsiasi norma è sempre uno spazio completo.\\
+Se per due norme vale $\| \; \|_2\leq K\| \; \|_1$, ma non 
+$k\| \; \|_1\leq \| \; \|_2$ allora non sono equivalenti, ma comunque alcune
+relazioni si possono stabilire.
+Ad esempio se un limite vale per $\| \; \|_1$, allora esso vale anche
+per $\| \; \|_2$, ma non è detto il contrario.
+Se $A$ è aperto per $\| \; \|_1$ lo è anche per $\| \; \|_2$ ma non
+è detto il contrario.
+Prendiamo l'esempio di prima di $C([a,b])$ con $\|f\|_1=max_{x\in[a,b]}|f(x)|$,
+$\|f\|_2=\int_{a}^b|f(x)|dx$. Abbiamo visto prima che $\| \; \|_1$ non può
+essere maggiorata da $\| \; \|_2$. Abbiamo però che $\| \; \|_2$ può
+essere maggiorata da $\| \; \|_1$:
+\[
+	\|f\|_2 = \int_{a}^b \abs{f(x)} dx \leq
+	(b-a) \max_{x \in [a, b]} \abs{f(x)} = (b-a) \|f\|_1
+.\]
+\section{Completamento di uno spazio}
+Dato uno spazio $(V, \| \; \|)$ possiamo formalmente costruire il suo
+completamento $(\widetilde{V},\| \; \|)$ con un procedimento analogo a quello
+che si usa per passare da $Q$ a $\RR$.
+\begin{definition}[completamento di un insieme]
+Innanzitutto il completamento è definito come uno spazio di Banach tale che
+esiste una funzione iniettiva che mappa $V \to \widetilde{V}$ in un sottospazio
+di $\widetilde{V}$ che conserva la struttura vettoriale e la norma.
+\end{definition}
+Possiamo quindi pensare a $\widetilde{V}$ come $V$ con l'aggiunta di tutti
+i suoi punti di accumulazione.
+\begin{definition}[equivalenza di successioni di Cauchy]
+Prendiamo l'insieme di tutte le successioni di Cauchy $\{v_i\}$ in $V$,
+e dichiariamo due successioni $\{v_i\} \sim \{w_i\}$ equivalenti se
+$\ds \lim_{i \to \infty} \|v_i - w_j\| = 0$.
+\end{definition}
+Le classi di equivalenza sono lo spazio $\widetilde{V}$ cercato.
+Chiamiamo $[\{v_i\}]$ la classe di equivalenza di $\{v_i\}$.
+Vediamo che $\widetilde{V}$ è uno spazio vettoriale definendo:
+\begin{align*}
+\lambda [\{v_i\}] &= \left[\{\lambda v_i\}\right] \quad \text{e} \\
+[\{v_i\} + [\{w_i\}] &= [\{v_i + w_i\}] 
+\end{align*}
+Le operazioni sono ben definite, cioè non dipendono dal rappresentante
+nella classe di equivalenza.
+
+Se $\ds \lim_{i \to \infty} \|v_i - v'_i\| = 0 \implies
+\lim_{i \to \infty} \|\lambda v_i - \lambda v_j\| = 0$, \\
+e se $\ds \lim_{i \to \infty} \|w_i - w'_i\| = 0 \implies
+\lim_{i \to \infty} \|v_1 + w_i - \left( v'_i + w'_i \right) \| = 0$.\\
+Esiste una naturale immersione di $V$ in $\widetilde{V}$, ad ogni $v\in V$
+associamo la successione di Cauchy $\{v_i\}$ costante $v_i = v \; \forall i$.
+Definiamo quindi una norma in $\widetilde{V}$: 
+$ \ds \|\{v_i\}\| = \lim_{i \to \infty} \|v_i\|$. Si vede che è ben definita,
+se
+\[
+\lim_{i \to \infty} \|v_i - v'_i\| = 0 \implies 
+\|[\{v_i\}]\| - \|[\{v_i'\}]\| = \lim_{i \to \infty} (\|v_i\| - \|v'_i\|) = 0
+.\] 
+In particolare l'immersione di $V$ in $\widetilde{V}$ con la successione
+costante conserva la norma.\\
+Ora vediamo che $V$ è denso in $\widetilde{V}$:
+\begin{proof}
+Prendiamo una generica $[\{v_i\}]$, poi prendiamo una successione di
+successioni $[\{v_j\}]$ costanti, cioè:
+\[
+[\{v_1,v_1,...,v_1,..\}],\; [\{v_2,v_2,...,v_2,\}], \ldots
+.\]
+Vediamo che questa successione converge a
+$[\{v_1, v_2, \ldots, v_k, \ldots\}]$.\\
+$ \ds \|[\{v_i\}] - [\{v_j\}]\| = \lim_{i \to \infty} \|v_i - v_j\|$,
+ma siccome $\{v_i\}$ è di Cauchy $\forall \eps > 0$, $\exists N$
+tale che per $j > N$ $\ds \lim_{i \to \infty} \|v_i - v_j\| < \eps \;$,
+quindi $[\{v_j\}] \to [\{v_i\}]$.
+Allo stesso modo si vede che $\hat{V}$ è il completamento di $V$, data la
+successione $[\{v_j\}]$ costruiamo $[\{v_1, v_2, \ldots, v_n, \ldots\}]$
+a cui essa converge.
+\end{proof}
+
+$\widetilde{V}$ è uno spazio completo. Prendiamo una successione di Cauchy di
+successioni di Cauchy $[\{v_i^j\}]$. Visto che $V$ è denso in $\widetilde{V}$
+possiamo trovare successioni costanti arbitrariamente vicine a quelle sopra.
+Per ogni classe di equivalenza di successioni riusciamo ad ottenere degli
+elementi tutti in $V$, il cui limite è uguale all'elemento $v_i$.
+Prendiamo ad esempio $[\{w^j\}]$ (la successione costante
+$\{w^1, w^1, \ldots, w^1\}]$) tale che
+$\| [\{w^j\}] - [\{v_i^j\}] \| < \frac{1}{j}$. Abbiamo che 
+\[
+\|[\{w^j\}] - [\{w^k\}]\| \leq
+\frac{1}{j} + \frac{1}{k} + \|[\{v_i^0\}] - [\{v_i^k\}]\|
+.\]
+quindi anche $[\{w^1\}]$ è di Cauchy e converge a 
+$[\{w^i\}] = \{w^1, w^2, w^3, \ldots\}]$ siccome
+\[
+\|[\{v_i^j\}] - [\{w^i\}]\| \leq \frac{1}{j} + \|[\{w^0\}] - [\{w^i\}]\|
+.\]
+abbiamo che anche $[\{v_i^j\}] \to [\{w^i\}]$ per $j \to \infty$.
+
+Vediamo altri esempi ed esercizi sulle norme.\\
+Prendiamo le funzioni $f: [-1, 1] \to \CC$ continue e derivabili con
+derivata continua e quindi limitata su $[-1, 1]$.
+Prendiamo $ \ds \|f\|_1 = \max_{x \in [-1, 1]} \abs{f(x)}$ e $ \ds
+\|f\|_2 = \max_{x \in [-1, 1]} \abs{f(x)} + \max_{x \in [-1, 1]} \abs{f'(x)}$.
+Abbiamo $\|f\|_1 \leq \|f\|_2 \; \forall f$, quindi $\| \; \|_1$ è maggiorata
+da $\| \; \|_2$ con $k = 1$.\\
+$\| \; \|_2$ però non può essere maggiorata da $\| \; \|_1$.
+Ad esempio prendiamo $f_n = x^n$, $\|f_n\|_1 = 1$ e $\|f_n\|_2= 1 + n$.
+Le due norme non sono equivalenti: prendiamo $g_n=|x|^{1+1/n}$,
+$g_n\in C^1([-1, 1]) \subset C^0([-1, 1])$. $g_n \to g = |x|$ 
+per $n \to \infty$ nella norma $\| \; \|_1$, infatti
+\[
+\|g_n - g\| = \max_{x \in [0,1] }(x(1 - x^{1/n})) = \frac{n^n}
+{(n+1)^{n+1}} \to 0
+.\]
+$g\notin C^1([-1,1])$ perché non derivabile in $0$.
