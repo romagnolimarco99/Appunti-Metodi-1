@@ -514,4 +514,116 @@ per $n \to \infty$ nella norma $\| \; \|_1$, infatti
 \|g_n - g\| = \max_{x \in [0,1] }(x(1 - x^{1/n})) = \frac{n^n}
 {(n+1)^{n+1}} \to 0
 .\]
-$g\notin C^1([-1,1])$ perché non derivabile in $0$.
+$g \notin C^1([-1, 1])$ perché non derivabile in $0$.
+
+\begin{definition}[norma $p$]
+In $\CC^n$ posiamo introdurre la \emph{norma} $p$:
+\[
+\|z\|_p=\left(\sum_{i=1}^n|z_i|^p\right)^{1/p}
+\]
+\end{definition}
+Per $p=1, 2$ si riconduce ai casi già considerati 
+$\ds \|z\|_1 = \sum_i \abs{z_i}$, $\ds \|z\|_2 = \sqrt{ \sum_i \abs{z_i}^2 }$.
+Verifichiamo che $\| \; \|_p$ è una norma per tutti i $p \geq 1$.
+Le proprietà $1)$ e $2)$ sono soddisfatte. Ci serve la seguente
+disuguaglianza, che generalizza quella di Cauchy-Schwartz:
+\begin{theorem}[disuguaglianza di H\"{o}lder]
+\[
+\sum_i|z_i^*w_i|\leq \left(\sum_i|z_i|^p\right)^{1/p}\left(\sum_i|w_i|^q\right)^{1/q}
+\]
+$\forall p \geq 1$ con $\dfrac{1}{p} + \dfrac{1}{q} = 1$
+\end{theorem}
+(Se $p = q = 2$ è Schwartz).
+\begin{proof}
+Chiamiamo
+$\ds \xi_i = \frac{\abs{z_i}^p}{\sum_j \abs{z_j}^p}$
+e
+$\ds \eta_i = \frac{\abs{w_i}^q}{\sum_j \abs{w_j}^q}$
+la disuguaglianza si riscrive come
+$\ds \sum_i \eta_i^{1/q} \xi_i^{1/p} \leq 1$ dove 
+$\ds \sum_i \xi_i = \sum_i \eta_i = 1$.\\
+Usiamo che per $\alpha \leq 1$  si ha $t^\alpha \leq \alpha t + 1 - \alpha$,
+$(\alpha t + 1 - \alpha - t^\alpha)' = \alpha - \alpha t^{\alpha-1}$
+quindi il minimo di $\alpha t + 1 - \alpha - t^\alpha$ si ha
+per $t=1$ ed è uguale a zero.\\
+Chiamiamo $t = \xi_i/\eta_i$ e $\alpha = 1/p$, quindi dev'essere
+$1 - \alpha = 1/q$ e abbiamo
+\[
+\left( \frac{\xi_i}{\eta_i} \right)^{1/p} \leq 
+\frac{1}{p} \frac{\xi_i}{\eta_i} + \frac{1}{q} \implies
+\xi_i^{1/p} \eta_i^{1/q} \leq \frac{1}{p} \xi_i + \frac{1}{q} \eta_i
+.\]
+Sommando su $i, \;$ $\ds \sum_i \eta_i^{1/q} \xi_i^{1/p} \leq 1$
+che è la disuguaglianza cercata.
+\end{proof}
+La disuguaglianza è saturata solo se $\xi_i = \eta_i \;$ $\forall i$. \\
+Possiamo scrivere la disuguaglianza di H\"{o}lder come 
+\[
+(z, w) \leq \|z\|_p \|w\|_q, \qquad \frac{1}{p} + \frac{1}{q} = 1
+\]
+La disuguaglianza triangolare per $\| \; \|_p$ è chiamata
+\begin{theorem}[disuguaglianza di Minkowski]
+\[
+\|z+w\|_p\leq \|z\|_p+\|w\|_p
+.\]
+\end{theorem}
+\begin{proof}
+partiamo da
+\[\sum_i(|z_i|+|w_i|)^p=\sum_i|z_i|(|z_i|+|w_i|)^{p-1}+\sum_i|w_i|(|z_i|+|w_i|)^{p-1}\]
+ora usiamo H\"{o}lder per entrambi i termini
+\[\leq\left(\left(\sum_i|z_i|^p\right)^{1/p}+\left(\sum_i|w_i|^p\right)^{1/p}\right)\left(\sum_i(|z_i|+|w_i|)^{q(p-1)}\right)^{1/q}\]
+\[=(\|z\|_p+\|w\|_p)\left(\sum_i(|z_i|+|w_i|)^p\right)^{\frac{p-1}{p}}\hspace{8mm} q=\frac{1}{1-1/p}=\frac{p}{p-1}\]
+quindi otteniamo
+\[\left(\sum_i(|z_i|+|w_i|)^p\right)^{1/p}\leq \|z\|_p+\|w\|_p\]
+infine
+\[
+\|z+w\|_p=\left(\sum_i|z_i+w_i|^p\right)^{1/p}\leq \left(\sum_i(|z_i|+|w_i|)\right)^{1/p}\leq |z\|_p+\|w\|_p
+.\]
+\end{proof}
+
+Se prendiamo successioni infinite $z = \{z_1, z_2, \ldots \}$ possiamo
+introdurre le norme\\
+$\ds \|z\|_p = \left(\sum_{i=1}^\infty \abs{z_i}^p\right)^{1/p}$.
+Occorre però scegliere uno spazio adeguato. 
+
+\begin{definition}[spazi $\ell^p$]
+Si definisce lo spazio $\ell^p$ l'insieme delle successioni per cui
+$\sum_i^{\infty} \abs{z_i}^p < \infty$ e quindi definiamo $\|z\|_p$ come sopra.
+\end{definition}
+Le proprietà $1)$, $2)$, e $3)$ della norma valgono come per le $n$-ple
+finite.
+Vedremo che $\ell^p$ è uno spazio normato completo.
+Prendiamo in $\CC^2$ $\|z\|_p = (\abs{z_1}^p + \abs{z_2}^p)^{1/p}$,
+con $z_1 = \rho_1 e^{i \theta_1}$ e $z_2 = \rho_2 e^{i \theta_2}$. Vediamo
+che le norme $\| \; \|_p$ non dipendono dalle fasi $\theta_1$ e $\theta_2$:
+$\|z\|_p = (\rho_1^p + \rho_2^p)^{1/p}$, $S_p(0,1) = \{z:\|z\|_p=1\}$
+\[
+(\rho_1^p + \rho_2^p)^{1/p} = 1 \implies \rho_2 = (1 - \rho_1^p)^{1/p}
+\]
+notiamo che, per $\rho_1 < 1, \;$ 
+$\ds \lim_{p \to \infty} (1 - \rho_1^p)^{1/p} = 1$.
+\[
+\lim_{p \to \infty} S_p(0, 1) = \{(\rho_1, \rho_2): \max \{\rho_1, \rho_2\} = 1
+	:= S_{\max}(0, 1)
+\]
+quindi $\| \; \|_p$ per $p \to \infty$ diventa
+$\| \; \|_{\infty} = max_i \abs{z_i}$
+(questo vale sia per $\CC^n$ che per le successioni infinite).\\
+Calcoliamo $m$ e $M$ che abbiamo usato per dimostrare la equivalenza
+delle norme. La norma di riferimento è $\| \; \|_{\infty}$.
+Chiamiamo $m_p$ e $M_p$ il minimo e il massimo assunto da $\| \; \|_p$
+nell'insieme $\|z\|_{\infty} = \max \{\rho_1, \rho_2\}=1$.
+Prendiamo $\rho_1 = 1$ e $0 \leq \rho_2 \leq 1$ (l'altro pezzo è equivalente)
+$\|z\|_p = (1 + \rho_2^p)^{1/p}$
+quindi il minimo è realizzato in $\rho_1 = 0$ e il massimo in $\rho_2 = 1$,
+$m_p = 1$, $M_p = 2^{1/p}$.
+In $\CC^n$ possiamo sempre ricondurci ai moduli degli 
+$z_i = \rho_i e^{i \theta_i}$
+\[
+\|z\|_p = \left(\sum_i \rho_i^p\right)^{1/p}, \qquad S_{\infty}(0, 1) =
+\bigcup_i \{\rho_i = 1\}
+\]
+\begin{align*}
+m_p &= \min_{p_i > 1} (1 + \sum_{i>1} \rho_i^p)^{1/p} = 1 \\
+M_p &= \max_{\rho_i > 1} \left(1 + \sum_{i>1} \rho_i^p\right)^{1/p} = n^{1/p}
+\end{align*}
