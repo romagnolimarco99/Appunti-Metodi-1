@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  22 MAR 2020 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  22 MAR 2020 20:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1363,10 +1363,10 @@ Package: accents 2006/05/12 v1.4 Math Accent Tools
 \cc@code=\count349
 \cc@group=\count350
 \cc@skewchar=\count351
-))
+)
 \openout3 = `appunti_metodi.auxlock'.
 
- (./math.tex
+) (./math.tex
 Package thmtools Info: Key `qed' (with value `')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
@@ -1718,20 +1718,26 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  [10]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 154.
+ (./figs/2nrm_stepf.pdf_tex
+<./figs/2nrm_stepf.pdf, id=129, page=1, 462.52798pt x 345.4506pt>
+File: ./figs/2nrm_stepf.pdf Graphic file (type pdf)
+<use ./figs/2nrm_stepf.pdf, page 1>
+Package pdftex.def Info: ./figs/2nrm_stepf.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 426.79135pt x 318.77776pt.
+) [11 <./figs/2nrm_stepf.pdf>]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 205.
- [11]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 312.
+line 214.
  [12]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 321.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
- [13] [14] [15] [16]) [17]
+ [13]
+[14] [15] [16]) [17]
 \openout2 = `capitoli/3prodottoscalare.aux'.
 
- (./capitoli/3prodottoscalare.tex
-[18
+ (./capitoli/3prodottoscalare.tex [18
 
 
 
@@ -1754,13 +1760,13 @@ Package rerunfilecheck Info: File `appunti_metodi.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44363 strings out of 481239
- 1035129 string characters out of 5921778
- 1555555 words of memory out of 5000000
- 58325 multiletter control sequences out of 15000+600000
- 626637 words of font info for 378 fonts, out of 8000000 for 9000
+ 44399 strings out of 481239
+ 1035679 string characters out of 5921778
+ 1555701 words of memory out of 5000000
+ 58347 multiletter control sequences out of 15000+600000
+ 630182 words of font info for 386 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,23n,106p,10105b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,23n,106p,10105b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2019/texm
 f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2019/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
@@ -1776,10 +1782,10 @@ texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2019/te
 xmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on appunti_metodi.pdf (19 pages, 243448 bytes).
+Output written on appunti_metodi.pdf (19 pages, 268085 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 143 named destinations out of 1000 (max. 500000)
- 68149 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 68154 words of extra memory for PDF output out of 74296 (max. 10000000)
 

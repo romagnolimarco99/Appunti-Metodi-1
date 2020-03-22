@@ -171,11 +171,20 @@ Prendiamo ora sempre $C([a, b])$ ma con $\|f\| = \int_{a}^b \abs{f(x)} \ud x$.
 Se prendiamo come esempio di successione
 \[
 f_n(x)=\begin{cases}
-0 \qquad &a\leq x \leq c - 1/n\\
+0 \qquad &a \leq x \leq c - 1/n\\
 \frac{n}{2}(x - c + 1/n) \qquad &c - 1/n \leq x \leq c + 1/n\\
 1 \qquad &c + 1/n \leq x \leq b
 \end{cases}
 \]
+\begin{figure}[!htb]
+	\centering 
+		\def\svgwidth{\columnwidth}
+		\resizebox{10cm}{6cm}{\includesvg{2nrm_stepf}}
+		%\includegraphics[width = 9cm, height = 6cm]
+		%{./figs/2nrm_stepf}
+	\caption{Funzione gradino $f(x)$ e la sua successione $f_n(x)$
+	\label{2nrm_stepf}}
+\end{figure}
 sono tutte funzioni continue. $f_n(x)$ converge puntualmente a
 \[
 f(x) = \begin{cases}
