@@ -3,7 +3,7 @@ Prendiamo uno spazio vettoriale $V$ su $\CC$ di dimensione arbitraria, non
 necessariamente finita. La discussione varrà anche per spazi definiti su
 $\RR$, basta trascurare *(il coniugio) quando compare. Ora equipaggiamo $V$
 con una norma.
-\begin{definition}[(norma e spazi normati)]
+\begin{definition}[norma e spazi normati]
 Una \emph{norma} $\| \; \|: V \mapsto \RR$ è una funzione che ad ogni elemento
 $v \in V$ associa un numero reale $\|v\|$, da intendersi come una nozione di
 "lunghezza" di $v$. Deve generalizzare il concetto di modulo in $\CC$ 
@@ -18,7 +18,7 @@ In questo caso $\left(V, \norm{\;} \right)$ è uno \emph{spazio normato}.
 \end{definition}
 La norma introduce anche una \emph{metrica}, cioè una distanza fra due elementi
 $v_1, v_2$ definita da $d(v_1, v_2) = \|v_1 - v_2\|$. 
-\begin{definition}{(distanza e spazi metrici)}
+\begin{definition}[distanza e spazi metrici]
 In genere uno \emph{spazio metrico} è un insieme, non necessariamente uno
 spazio vettoriale, in cui per ogni coppia di di elementi è definita una
 \emph{distanza} $d: V \times V \mapsto \RR$ tale che:
@@ -160,7 +160,7 @@ cui $f_n(x)$ convergono puntualmente $\ds \lim_{n \to \infty} f_n(x) = f(x)\;
 \forall x$.
 
 Ma la convergenza è anche uniforme, non solo puntuale, infatti 
-$\delta' < \delta \;$, $i,j>N$ $\|f_i-f_j\|<\delta'$ mandando $f\to 0$
+$\delta' < \delta \;$, $i,j>N$ $\|f_i-f_j\|<\delta'$ mandando $j \to + \infty$
 abbiamo per $i>N$ $\|f_i-f\|\leq \delta'<\delta$. Siccome la convergenza è
 uniforme $f(x)$ è anch'essa continua, quindi lo spazio $C([a,b])$ con
 la norma $\ds \max_{x}\abs{f(x}|$ è completo, cioè uno spazio di Banach.
