@@ -79,6 +79,8 @@ x \in V \longleftrightarrow (\lambda_1, \lambda_2, \ldots, \lambda_n) \in \RR^n.
 \end{equation*}
 Tutti gli spazi vettoriali di dimensione finita su $\RR$ ($\CC$) sono isomorfi a $\RR^n$ ($\CC^n$) dove $n$ è la loro dimensione. Ovviamente l'isomorfismo richiede la scelta preliminare di una base.
 
+\section{Applicazioni lineari}
+
 \begin{definition}{(applicazione lineare)}
 Dati due spazi vettoriali $V$, $\dim{V} = n$, e $W$, $\dim{W} = m$, un'applicazione lineare è una funzione 
 \begin{align*}
@@ -126,4 +128,43 @@ Quindi
 \begin{equation*}
 A(x) = \sum_i{\lambda_i A(e_i)} = \sum_i\sum_j{\lambda_i a_{j,i} f_j} = \sum_j{\mu_j f_j}
 \end{equation*}
-Dal seguente prodotto si ottiene un vettore in $\RR^m$, che corrisponde ad $A(x)$ nella base $\{f_j\}$.
+Dal seguente prodotto si ottiene un vettore in $\RR^m$, che corrisponde ad $A(x)$ nella base $\{f_j\}$. Un'applicazione lineare ha un nucleo $\ker{V}$ e un'immagine $\Ima{V}$ definiti come segue:
+\begin{align*}
+\ker{V} &= \{x \in V : A(x) = 0\}\\
+\Ima{V} &= \{y \in W : \exists x \in V : A(x) = y\}.
+\end{align*}
+Dalla linearità di $A$ segue che $\ker{V}$ e $\Ima{V}$ sono spazi vettoriali. Inoltre si dimostra che 
+\begin{equation}
+\dim{V} = \dim{\ker{V}} + \dim{\Ima{V}}.
+\end{equation}
+
+\begin{definition}{(operatore lineare)} 
+Un operatore lineare su uno spazio è una funzione $A : V \rightarrow V$ che lo manda in se stesso.In questo caso se $A$ è iniettivo (o suriettivo), allora $A$ è invertibile e si può definire l'operatore lineare $A^{-1}$ tale che $A^{-1} A = A A^{-1} = \II$, dove $\II$ è l'identità.
+\end{definition} 
+
+L'insieme delle applicazioni lineari da $V$ a $W$ è esso stesso uno spazio vettoriale dove $\lambda_1 A_1 \lambda_2 A_2$ è definito $\left(\lambda_1 A_1 \lambda_2 A_2 \right) (x) = \lambda_1 A_1(x) \lambda_2 A_2(x)$. Rappresentandolo come matrice $\left[a_{ij}\right] \in \RR^{nm}$ abbiamo proprio lo spazio vettoriale $\RR^{nm}$. Le applicazioni lineari si possono comporre, se abbiamo tre spazio vettoriale e le seguenti applicazioni 
+\begin{align*}
+V_1 \xrightarrow{A_1} V_2 \xrightarrow{A_2} V_3
+\end{align*} 
+allora $A_2 \circ A_1$, che chiameremo semplicemente $A_2 A_1$, è un'applicazione $V_1 \xrightarrow{A_2 A_1} V_3$ definita da $A_2 A_2 (x) = A_2 \left(A_1(x)\right)$.\\
+Quindi sullo spazio degli operatori su $V$, $V \xrightarrow{A} V$, possiamo definire un prodotto. Questo prodotto è non commutativo, in genere $A_1A_2 \neq A_2A_1$. Se $A_1A_2 = A_2A_1$ allora si dice che gli operatori $A_1$ e $A_2$ commutano.\\
+
+Studiamo ora altre strutture che si possono aggiungere allo spazio $\CC^n$ o ($\RR^n$).
+
+\begin{definition}{(modulo e norma)} 
+Dato un numero complesso $z = x + iy \in \CC$ possiamo definire il modulo 
+\begin{align*}
+\abs{z} = \sqrt{x^2 + y^2}.
+\end{align*} 
+Il concetto di modulo si può generalizzare anche allo spazio vettoriale $\CC^n$. Ad esempio si può definire, dato $z = (z_1, z_2, \ldots, z_n) \in \CC^n$, il modulo, che chiameremo norma
+\begin{align*}
+\norm{z} = \sqrt{\abs{z_1} + \abs{z_2} + \cdots + \abs{z_n}}
+\end{align*}
+\end{definition}
+
+Si può verificare che $\norm{ }$ così definita soddisfa alcune proprietà che l'accomunano al modulo definito per $\CC$:
+\begin{enumerate}
+\item $\norm{z} \geq 0$		e $\norm{z} = 0 \Leftrightarrow z=0$
+\item $\norm{\lambda z} = \abs{\lambda}\cdot \norm{z}$
+\item $\norm{z_1 + z_2} \leq \norm{z_1} + \norm{z_2}$.
+\end{enumerate} 
