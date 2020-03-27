@@ -10,10 +10,11 @@ from matplotlib import pyplot as plt
 
 # Costanti dei grafici
 a = 1
-c = 2
+c = 2.
 b = 3
+eps = 2e-4
 
-xnum = 1000
+xnum = 10000
 xx = np.linspace(start=1, stop=3, num=xnum)
 
 Niter = 30 
@@ -25,10 +26,12 @@ def f_n(x, n):
     for x in xx:
         if a <= x <= c - 1./n:
             y_n.append(0)
-        elif (c - 1./n) <= x <= (c + 1./n):
-            y_n.append(n/2. * (x - c + 1./n))
+        elif (c - 1./n) <= x <= c:
+            y_n.append(n * (x - c + 1./n))
+        elif c <= x <= (c + 1./n):
+            y_n.append(n * (-x + c + 1./n))
         elif c + 1./n <= x <= b:
-            y_n.append(1)
+            y_n.append(0)
     return y_n
 
 def f(x):
@@ -36,11 +39,26 @@ def f(x):
     for x in xx:
         if a <= x < c:
             y.append(0)
-        elif x == c:
-            y.append(1./2)
-        elif c < x <= b:
+        elif abs(x) <= c + eps:
             y.append(1)
+        elif c < x <= b:
+            y.append(0)
     return y
+
+def pi_fmt(value, tick_number):
+    # returns number of multiples of pi/2 (argument of FuncFormatter)
+    N = int(np.round(2 * value / np.pi))
+    if N == 0:
+        return "0"
+    elif N == 1:
+        return r"$\pi/2$"
+    elif N == 2:
+        return r"$\pi$"
+    elif N % 2 > 0:
+        return r"${0}\pi/2$".format(N)
+    else:
+        return r"${0}\pi$".format(N // 2)
+
     
 # Variabili di controllo dei grafici in ordine decrescente di pesantezza
 tex=True
@@ -53,10 +71,10 @@ if tex:
 # Grafico
 fig, ax = plt.subplots()
 plt.plot(xx, f(xx), label='$f(x)$', zorder = 10)
-plt.plot(xx, f_n(xx, 1), ls='--', label='$f_1 (x)$')
+plt.plot(xx, f_n(xx, 1), ls='--', alpha=0.8, label='$f_1 (x)$')
 # for n in range(5, Niter, Nstep):
 for n in [2, 4, 10, 20]:
-    plt.plot(xx, f_n(xx, n), ls='--', label='$f_{%d}(x)$' %n)
+    plt.plot(xx, f_n(xx, n), ls='--', alpha=0.8, label='$f_{%d}(x)$' %n)
 
 ax.minorticks_on()
 ax.grid(c = 'gray', ls = '--', alpha=0.7)
@@ -70,6 +88,7 @@ if tick:
     # ax.set_ylim(0, 1)
     ax.xaxis.set_major_locator(plt.MultipleLocator(0.2))
     plt.xticks([1, 2, 3], ['a', 'c', 'b'])
+    # ax.xaxis.set_major_formatter(plt.FuncFormatter(pi_fmt))
     # ax.xaxis.set_minor_locator(plt.MultipleLocator(5e-2))
     ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
     # ax.yaxis.set_minor_locator(plt.MultipleLocator(5e-2))

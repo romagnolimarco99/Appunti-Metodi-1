@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '2nrm_stepf.pdf' (pdf, eps, ps)
+%% Accompanies image file '2nrm_dicdelta.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -53,6 +53,6 @@
   \begin{picture}(1,0.7390625)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{2nrm_stepf.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{2nrm_dicdelta.pdf}}%
   \end{picture}%
 \endgroup%
