@@ -243,6 +243,14 @@ n(-x+c+1/n)\qquad &c \leq x \leq c + 1/n\\
 abbiamo $\|f_n\|_1=1$ $\forall n$ mentre $\|f_n\|_2=1/n\to 0$ per
 $n\to \infty$ quindi non può esistere $k$ tale che
 $\|f_n\|_1\leq k \|f_n\|_2$ $\forall n$.
+\begin{figure}[!htb]
+	\centering 
+		\def\svgwidth{\columnwidth}
+		\resizebox{10cm}{6cm}{\includesvg{2nrm_dicdelta}}
+	\caption{Una successione di funzioni $f_n(x)$ convergente a $f(x)$
+	o $\delta$ di Dirac per $n \to \infty$.
+	\label{2nrm_dicdelta}}
+\end{figure}
 \end{example}
 
 Vediamo altre nozioni di topologia.\\
@@ -516,7 +524,7 @@ Abbiamo $\|f\|_1 \leq \|f\|_2 \; \forall f$, quindi $\| \; \|_1$ è maggiorata
 da $\| \; \|_2$ con $k = 1$.\\
 $\| \; \|_2$ però non può essere maggiorata da $\| \; \|_1$.
 Ad esempio prendiamo $f_n = x^n$, $\|f_n\|_1 = 1$ e $\|f_n\|_2= 1 + n$.
-Le due norme non sono equivalenti: prendiamo $g_n=|x|^{1+1/n}$,
+Le due norme non sono equivalenti: prendiamo $g_n=\abs{x}^{1+1/n}$,
 $g_n\in C^1([-1, 1]) \subset C^0([-1, 1])$. $g_n \to g = |x|$ 
 per $n \to \infty$ nella norma $\| \; \|_1$, infatti
 \[
@@ -524,6 +532,14 @@ per $n \to \infty$ nella norma $\| \; \|_1$, infatti
 {(n+1)^{n+1}} \to 0
 .\]
 $g \notin C^1([-1, 1])$ perché non derivabile in $0$.
+\begin{figure}[!htb]
+	\centering 
+		\def\svgwidth{\columnwidth}
+		\resizebox{10cm}{6cm}{\includesvg{2nrm_absx}}
+	\caption{La successione di funzioni $g_n(x) = \abs{x}^{1 + 1/n}$
+	 convergente a $\abs{x}$ per $n \to \infty$.
+	\label{2nrm_absx}}
+\end{figure}
 
 \begin{definition}[norma $p$]
 In $\CC^n$ posiamo introdurre la \emph{norma} $p$:
@@ -555,6 +571,15 @@ Usiamo che per $\alpha \leq 1$  si ha $t^\alpha \leq \alpha t + 1 - \alpha$,
 $(\alpha t + 1 - \alpha - t^\alpha)' = \alpha - \alpha t^{\alpha-1}$
 quindi il minimo di $\alpha t + 1 - \alpha - t^\alpha$ si ha
 per $t=1$ ed è uguale a zero.\\
+\begin{figure}[!htb]
+	\centering 
+		\def\svgwidth{\columnwidth}
+		\resizebox{10cm}{6cm}{\includesvg{2nrm_tang}}
+	\caption{Illustrazione geometrica del fatto generale
+	 $f(t) = t^\alpha \leq \alpha t + 1 - \alpha \;$ per $\alpha \leq 1$. 
+	\label{2nrm_tang}}
+\end{figure}
+
 Chiamiamo $t = \xi_i/\eta_i$ e $\alpha = 1/p$, quindi dev'essere
 $1 - \alpha = 1/q$ e abbiamo
 \[
