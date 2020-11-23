@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  27 MAR 2020 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  23 NOV 2020 14:17
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**appunti_metodi
+**appunti_metodi.tex
 (./appunti_metodi.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
@@ -1731,7 +1731,7 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 154.
  (./figs/2nrm_stepf.pdf_tex
-<./figs/2nrm_stepf.pdf, id=140, page=1, 462.52798pt x 341.8371pt>
+<./figs/2nrm_stepf.pdf, id=142, page=1, 462.52798pt x 341.8371pt>
 File: ./figs/2nrm_stepf.pdf Graphic file (type pdf)
 <use ./figs/2nrm_stepf.pdf, page 1>
 Package pdftex.def Info: ./figs/2nrm_stepf.pdf , page1 used on input line 56.
@@ -1741,7 +1741,7 @@ Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input
 line 214.
 
 (./figs/2nrm_dicdelta.pdf_tex
-<./figs/2nrm_dicdelta.pdf, id=241, page=1, 462.52798pt x 341.8371pt>
+<./figs/2nrm_dicdelta.pdf, id=243, page=1, 462.52798pt x 341.8371pt>
 File: ./figs/2nrm_dicdelta.pdf Graphic file (type pdf)
 <use ./figs/2nrm_dicdelta.pdf, page 1>
 Package pdftex.def Info: ./figs/2nrm_dicdelta.pdf , page1 used on input line 56
@@ -1752,13 +1752,13 @@ Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 329.
  [13] [14]
 [15] (./figs/2nrm_absx.pdf_tex
-<./figs/2nrm_absx.pdf, id=390, page=1, 462.52798pt x 341.8371pt>
+<./figs/2nrm_absx.pdf, id=392, page=1, 462.52798pt x 341.8371pt>
 File: ./figs/2nrm_absx.pdf Graphic file (type pdf)
 <use ./figs/2nrm_absx.pdf, page 1>
 Package pdftex.def Info: ./figs/2nrm_absx.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 426.79135pt x 315.44324pt.
 ) (./figs/2nrm_tang.pdf_tex
-<./figs/2nrm_tang.pdf, id=391, page=1, 462.52798pt x 341.8371pt>
+<./figs/2nrm_tang.pdf, id=393, page=1, 462.52798pt x 341.8371pt>
 File: ./figs/2nrm_tang.pdf Graphic file (type pdf)
 <use ./figs/2nrm_tang.pdf, page 1>
 Package pdftex.def Info: ./figs/2nrm_tang.pdf , page1 used on input line 56.
@@ -1768,34 +1768,29 @@ Package pdftex.def Info: ./figs/2nrm_tang.pdf , page1 used on input line 56.
 
  (./capitoli/3prodottoscalare.tex
 chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-) [19
+[19
 
 
 
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
+]) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (./appunti_metodi.aux (./capitoli/1spazivettoriali.aux)
 (./capitoli/2normatopologia.aux) (./capitoli/3prodottoscalare.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `appunti_metodi.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44458 strings out of 481239
- 1036765 string characters out of 5921778
- 1556010 words of memory out of 5000000
- 58377 multiletter control sequences out of 15000+600000
+ 44472 strings out of 481239
+ 1037011 string characters out of 5921778
+ 1555979 words of memory out of 5000000
+ 58384 multiletter control sequences out of 15000+600000
  631271 words of font info for 393 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,23n,106p,10105b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,23n,106p,10109b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2019/texm
 f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2019/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
@@ -1811,10 +1806,10 @@ texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2019/te
 xmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on appunti_metodi.pdf (19 pages, 343455 bytes).
+Output written on appunti_metodi.pdf (20 pages, 346226 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
- 156 named destinations out of 1000 (max. 500000)
- 68177 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 68185 words of extra memory for PDF output out of 74296 (max. 10000000)
 
