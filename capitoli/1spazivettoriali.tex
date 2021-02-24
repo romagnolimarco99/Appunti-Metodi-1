@@ -16,7 +16,7 @@ Quindi dati $x,y \in V$ e $\lambda, \mu \in C$ vale che:
 
 Inoltre, dati $0,1 \in C$ allora $0 \cdot x = 0$ e $1 \cdot x = x$.
 
-Per noi il campo $C$ sarà sempre uno tra il campo dei numeri reali $\RR$ e quello dei numeri complessi $\CC$. Gli esempi più semplici di spazi vettoriali sono le n-ple di numeri. $\RR^n$ definito da tutti gli elementi del tipo $(x_1, x_2, \ldots , x_n)$ con $x_i \in \RR$, dove:
+Per noi il campo $C$ sarà sempre uno tra il campo dei numeri reali $\RR$ e quello dei numeri complessi $\CC$. Gli esempi più semplici di spazi vettoriali sono le n-ple di numeri, ad esempio $\RR^n$, definito da tutti gli elementi del tipo $(x_1, x_2, \ldots , x_n)$ con $x_i \in \RR$, dove:
 
 \begin{itemize}
 \item $(x_1, x_2, \ldots , x_n) + (y_1, y_2, \ldots , y_n) = (x_1 + y_1, x_2 + y_2,\ldots, x_n + y_n)$;
@@ -33,8 +33,10 @@ Spesso (ma non sempre!) le "soluzioni di un problema" matematico o fisico forman
  
 in cui, se $u_1(x)$ e $u_2$ sono soluzioni, anche $\lambda u_1(x) + \mu u_2(x)$ lo è, per ogni scelta di $\lambda, \mu \in \RR$ (o $\CC$). In questo caso si dice che il problema è lineare e soddisfa il "principio di sovrapposizione". Capita spesso che un problema generico (quindi non lineare) diventi lineare nell'approssimazione di piccole fluttuazioni attorno ad un punto di equilibrio. Oppure ci sono casi in cui il principio di sovrapposizione vale in generale come in Elettromagnetismo o in Meccanica Quantistica.
 
+\section{Base e Dimensione}
+
 \begin{definition}{(lineare indipendenza)}
-Dati $n$ elementi $x_1, x_2, \ldots, x_n$ una generica combinazione lineare è $\lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_n x_n$. Se $\lambda_1 x_1 + \cdots \lambda_n x_n = 0$ implica $\lambda_i = 0 \forall i$ allora i vettori $x_i$ sono detti linearmente indipendenti. 
+Dati $n$ elementi $x_1, x_2, \ldots, x_n$ una generica combinazione lineare è $\lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_n x_n$. Se $\lambda_1 x_1 + \cdots \lambda_n x_n = 0$ implica $\lambda_i = 0 \; \forall i$ allora i vettori $x_i$ sono detti linearmente indipendenti. 
 \end{definition}
 
 \begin{definition}{(dimensione di uno spazio)}
@@ -60,20 +62,20 @@ ci sarà almeno un $i$ per cui $\lambda_i^{(1)} \neq 0$, per cui (senza perdita 
 \begin{equation*}
 y_1 = \frac{x_1}{\lambda_1^{(1)}} - \frac{\lambda_2^{(1)}}{\lambda_1^{(1)}} y_2 - \cdots - \frac{\lambda_m^{(1)}}{\lambda_1^{(1)}} y_m.
 \end{equation*} 
-Quindi $x_1, y_2, \ldots , y_m$ sono una nuova base per $V$. A questo punto si può iterare questo procedimento fino a creare una nuova base di $m$ vettori scelti fra gli $\{x_i\}$.Ma allora deve essere per forza $m=n$. 
+Quindi $x_1, y_2, \ldots , y_m$ sono una nuova base per $V$. A questo punto si può iterare questo procedimento fino a creare una nuova base formata dai primi $m$ vettori $\{x_i\}$. Se fosse $m < n$ si avrebbe che i vettori $x_{n-m},\cdots,x_n$ possono essere espressi come combinazione lineare dei $\left\lbrace x \right\rbrace^m_1$, ma questo è assurdo per definizione. Allora deve essere per forza $m=n$. 
 \end{proof}
 
-Se prendiamo $\RR^n$ una base è $e_i = (0, \ldots, 1, \ldots,0)$ con $1$ nella i-esima posizione. Infatti sono linearmente indipendenti e $\forall x \in \RR^n$ 
+Una base di $\RR^n$ è $e_i = (0, \ldots, 1, \ldots,0)$ con $1$ nella i-esima posizione e $0$ altrove. Si vede facilmente che sono linearmente indipendenti e che generano lo spazio. Infatti $\forall x \in \RR^n$ 
 \begin{equation*}
 (x_1, x_2, \ldots, x_n) = e_1 x_1 + e_2 x_2 + \cdots e_n x_n
 \end{equation*}
-Quindi generano $\RR^n$. Quindi $\dim{\RR^n} = n$. Se prendiamo $\CC^n$ la sua dimensione come spazio vettoriale come spazio vettoriale sul campo $\CC$ è $\dim_\CC{\CC^n} = n$. In questo caso omettiamo il $ \CC$ e scrivere semplicemente $\dim{\CC^n} =  n$. Come spazio vettoriale nel campo dei reali invece $\dim_\RR{\CC^n} = 2n$, dove una possibile base è $e_j^1 = (0,\ldots,1,\ldots,0), \; e_j^2 = (0,\ldots,i,\ldots,0)$ con $1 \geq j \leq n$. 
+Quindi $\dim{\RR^n} = n$. Allo stesso modo, se prendiamo $\CC^n$ la sua dimensione come spazio vettoriale sul campo $\CC$ è $\dim_\CC{\CC^n} = n$. In questo caso omettiamo il $ \CC$ al pedice e si scriverà semplicemente $\dim{\CC^n} =  n$. Come spazio vettoriale nel campo dei reali invece $\dim_\RR{\CC^n} = 2n$, dove una possibile base è $e_j^1 = (0,\ldots,1,\ldots,0), \; e_j^2 = (0,\ldots,i,\ldots,0)$ con $1 \geq j \leq n$. 
 
 \begin{definition}{(sottospazio vettoriale)}
-Se abbiamo $m<n$ vettori linearmente indipendenti $y_1, y_2, \ldots , y_m$ in uno spazio vettoriale $V$ con $\dim	{V} = n$, allora l'insieme di tutte le combinazioni lineari $\lambda_1 y_1 + \lambda_2 y_2 + \cdots + \lambda_m y_m$ è un sottospazio vettoriale $V' \subset V$ con $\dim{V'}$.
+Se abbiamo $m<n$ vettori linearmente indipendenti $y_1, y_2, \ldots , y_m$ in uno spazio vettoriale $V$ con $\dim	{V} = n$, allora l'insieme di tutte le combinazioni lineari $\lambda_1 y_1 + \lambda_2 y_2 + \cdots + \lambda_m y_m$ è un sottospazio vettoriale $V' \subset V$ con $\dim{V'} = m$.
 \end{definition}
 
-Data una base $x_1, x_2, \ldots, x_n$ di elementi di $V$ possiamo fare un isomorfismo fra $V$ e $\RR^n$. Dato un $x \in V$ lo scriviamo in modo univoco come $x = $ ed associamo 
+Data una base $x_1, x_2, \ldots, x_n$ di elementi di $V$ possiamo fare un isomorfismo fra $V$ e $\RR^n$. Dato un $x \in V$ lo scriviamo in modo univoco come $x = \lambda_1 x_1+\cdots+\lambda_nx_n$ ed associamo 
 \begin{equation*}
 x \in V \longleftrightarrow (\lambda_1, \lambda_2, \ldots, \lambda_n) \in \RR^n.
 \end{equation*}
@@ -130,31 +132,32 @@ A(x) = \sum_i{\lambda_i A(e_i)} = \sum_i\sum_j{\lambda_i a_{j,i} f_j} = \sum_j{\
 \end{equation*}
 Dal seguente prodotto si ottiene un vettore in $\RR^m$, che corrisponde ad $A(x)$ nella base $\{f_j\}$. Un'applicazione lineare ha un nucleo $\ker{V}$ e un'immagine $\Ima{V}$ definiti come segue:
 \begin{align*}
-\ker{V} &= \{x \in V : A(x) = 0\}\\
-\Ima{V} &= \{y \in W : \exists x \in V : A(x) = y\}.
+\ker{A} &= \{x \in V : A(x) = 0\}\\
+\Ima{A} &= \{y \in W : \exists x \in V : A(x) = y\}.
 \end{align*}
-Dalla linearità di $A$ segue che $\ker{V}$ e $\Ima{V}$ sono spazi vettoriali. Inoltre si dimostra che 
-\begin{equation}
-\dim{V} = \dim{\ker{V}} + \dim{\Ima{V}}.
+Dalla linearità di $A$ segue che $\ker{V}$ e $\Ima{V}$ sono sottospazi vettoriali dei relativi spazi di appartenenza. Inoltre si può dimostrare che 
+\begin{equation}\label{eq:dim}
+\dim{V} = \dim{\ker{A}} + \dim{\Ima{A}}.
 \end{equation}
+Da ciò si vede facilmente che un'applicazione lineare iniettiva ($\dim{\ker{A}} =0$) è anche suriettiva ($\dim{\Ima{A}} = \dim{V}$) e viceversa. Allora è invertibile e si può definire l'inversa $A^{-1}$ tale che $A^{-1} A = A A^{-1} = \II$, dove $\II$ è l'identità. 
 
 \begin{definition}{(operatore lineare)} 
-Un operatore lineare su uno spazio è una funzione $A : V \rightarrow V$ che lo manda in se stesso.In questo caso se $A$ è iniettivo (o suriettivo), allora $A$ è invertibile e si può definire l'operatore lineare $A^{-1}$ tale che $A^{-1} A = A A^{-1} = \II$, dove $\II$ è l'identità.
+Un operatore lineare su uno spazio è una funzione $A : V \rightarrow V$ che lo manda in se stesso.
 \end{definition} 
 
-L'insieme delle applicazioni lineari da $V$ a $W$ è esso stesso uno spazio vettoriale dove $\lambda_1 A_1 \lambda_2 A_2$ è definito $\left(\lambda_1 A_1 \lambda_2 A_2 \right) (x) = \lambda_1 A_1(x) \lambda_2 A_2(x)$. Rappresentandolo come matrice $\left[a_{ij}\right] \in \RR^{nm}$ abbiamo proprio lo spazio vettoriale $\RR^{nm}$. Le applicazioni lineari si possono comporre, se abbiamo tre spazio vettoriale e le seguenti applicazioni 
+L'insieme delle applicazioni lineari da $V$ a $W$ è esso stesso uno spazio vettoriale dove $\lambda_1 A_1 + \lambda_2 A_2$ è definito $\left(\lambda_1 A_1 + \lambda_2 A_2 \right) (x) = \lambda_1 A_1(x) + \lambda_2 A_2(x)$. Rappresentandolo come matrice $\left[a_{ij}\right] \in \RR^{n\cdot m}$ abbiamo proprio lo spazio vettoriale $\RR^{n\cdot m}$. Le applicazioni lineari si possono comporre: se abbiamo tre spazi vettoriali $V_1, V_2, V_3$ e due applicazioni lineari $A_1$ e $A_2$ tali che
 \begin{align*}
 V_1 \xrightarrow{A_1} V_2 \xrightarrow{A_2} V_3
 \end{align*} 
 allora $A_2 \circ A_1$, che chiameremo semplicemente $A_2 A_1$, è un'applicazione $V_1 \xrightarrow{A_2 A_1} V_3$ definita da $A_2 A_2 (x) = A_2 \left(A_1(x)\right)$.\\
-Quindi sullo spazio degli operatori su $V$, $V \xrightarrow{A} V$, possiamo definire un prodotto. Questo prodotto è non commutativo, in genere $A_1A_2 \neq A_2A_1$. Se $A_1A_2 = A_2A_1$ allora si dice che gli operatori $A_1$ e $A_2$ commutano.\\
+Quindi sullo spazio degli operatori su $V$ ($V \xrightarrow{A} V$) possiamo definire un prodotto. Questo prodotto è non commutativo, in genere $A_1A_2 \neq A_2A_1$. Se $A_1A_2 = A_2A_1$ allora si dice che gli operatori $A_1$ e $A_2$ commutano.\\
 
 Studiamo ora altre strutture che si possono aggiungere allo spazio $\CC^n$ o ($\RR^n$).
 
 \begin{definition}{(modulo e norma)} 
-Dato un numero complesso $z = x + iy \in \CC$ possiamo definire il modulo 
+Dato un numero complesso $z = x + iy$ possiamo definire il modulo 
 \begin{align*}
-\abs{z} = \sqrt{x^2 + y^2}.
+\abs{z} = \sqrt{\overline{z}\cdot z} = \sqrt{x^2 + y^2}.
 \end{align*} 
 Il concetto di modulo si può generalizzare anche allo spazio vettoriale $\CC^n$. Ad esempio si può definire, dato $z = (z_1, z_2, \ldots, z_n) \in \CC^n$, il modulo, che chiameremo norma
 \begin{align*}
@@ -162,9 +165,27 @@ Il concetto di modulo si può generalizzare anche allo spazio vettoriale $\CC^n$
 \end{align*}
 \end{definition}
 
-Si può verificare che $\norm{ }$ così definita soddisfa alcune proprietà che l'accomunano al modulo definito per $\CC$:
+Si può verificare che $\norm{\cdot}$ così definita soddisfa alcune proprietà che l'accomunano al modulo definito per $\CC$:
 \begin{enumerate}
-\item $\norm{z} \geq 0$		e $\norm{z} = 0 \Leftrightarrow z=0$
-\item $\norm{\lambda z} = \abs{\lambda}\cdot \norm{z}$
+\item $\norm{z} \geq 0\;$	e $\; \norm{z} = 0 \Leftrightarrow z=0$
+\item $\norm{\lambda z} = \abs{\lambda} \norm{z}$
 \item $\norm{z_1 + z_2} \leq \norm{z_1} + \norm{z_2}$.
 \end{enumerate} 
+
+In particolare, l'ultima proprietà è detta \emph{disuguaglianza triangolare}. Infatti, nel caso reale, corrisponde alla disuguaglianza sui lati del triangolo.\\
+
+%%figura triangolo%%
+
+\begin{definition}{(distanza)} 
+Data una norma è possibile definire una \emph{distanza} fra due elementi come la norma della loro differenza
+\begin{equation*}
+d(z_1,z_2) = \norm{z_1 - z_2}.
+\end{equation*}  
+\end{definition}
+Dalle proprietà sopra discende che:
+\begin{itemize}
+\item $d(z_1,z_2) \geq 0\;$ e $\; d(z_1,z_2) = 0 \Leftrightarrow z_1  = z_2$
+\item $d(z_1,z_2) = d(z_2, z_1)$
+\item $d(z_1,z_2) \leq d(z_1,z_3) + d(z_3,z_2)$
+\end{itemize}
+Uno spazio equipaggiato con una distanza è chiamato \emph{spazio metrico} e su di esso può essere definita una topologia. La norma definita sopra non è l'unica che può essere definita su $\CC^n$. Vedremo che possono essere definite altre norme che rispettano le stesse proprietà sopra, ad esempio $\norm{z} = $
