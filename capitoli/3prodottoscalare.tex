@@ -17,23 +17,27 @@ Prendiamo uno spazio vettoriale $V$. Un prodotto scalare
 
 \end{definition}
 
-Possiamo definire la seguente funzione $\norm{v}  = \sqrt{(v,v)}$ e dimostrare che è una norma.
+Possiamo definire la seguente funzione $\norm{v}  = \sqrt{(v,v)}$ e dimostrare
+che è una norma.
 
-\begin{theorem}
-Sia $V$ uno spazio vettoriale con prodotto scalare $(,)$. Sia $\norm{v} = \sqrt{(v,v)}$. Allora $\norm{v}$ è una norma per cui, per ogni $v,w \in V$, vale la disuguaglianza di Cauchy-Schwarz \index{disuguaglianza di Cauchy}
-\begin{equation}
-\label{dis_sch}
+\begin{theorem}\label{th: dis_sch}
+Sia $V$ uno spazio vettoriale con prodotto scalare $(,)$.
+Sia $\norm{v} = \sqrt{(v,v)}$. Allora $\norm{v}$ è una norma per cui,
+per ogni $v,w \in V$, vale la disuguaglianza di Cauchy-Schwarz 
+\addcontentsline{toc}{subsection}{disuguaglianza di Cauchy}
+\begin{equation}\label{eq: dis_sch}
 \abs{(v,w)} \leq \norm{v} \cdot \norm{w}.
 \end{equation} 
 \end{theorem}
 
 \begin{proof}
-Si vede immediatamente che $\norm{v}$ è una norma ben definita, grazie al fatto che il prodotto scalare è definito positivo per costruzione. \\
-Per cui $\norm{v - \lambda(v,w)w} \geq 0$ con $\lambda \in \mathbb{R}$. 
+Si vede immediatamente che $\norm{v}$ è una norma ben definita, grazie al
+fatto che il prodotto scalare è definito positivo per costruzione. \\
+Per cui $\norm{v - \lambda(v,w)w} \geq 0$ con $\lambda \in \RR$. 
 Quindi
 \begin{gather*}
 (v - \lambda(v,w)w,v - \lambda(v,w)w) = \\
-=\norm{v}^2 - 2\lambda\abs{(v,w)}^2 +\lambda^2 \abs{(v,w)}^2 \norm{w}^2 \geq 0 .
+=\norm{v}^2 - 2\lambda\abs{(v,w)}^2 +\lambda^2 \abs{(v,w)}^2 \norm{w}^2 \geq 0 ;
 \end{gather*}
 
 Per cui
@@ -41,9 +45,39 @@ Per cui
 4\abs{(v,w)}\left(\abs{(v,w)}^2 - \norm{v}^2 \norm{w}^2\right) \leq 0
 \end{align*}
 
-da cui la disuguaglianza.\\
+da cui la disuguaglianza.
+\end{proof}
+\begin{remark}
+La disuguaglianza in \ref{th: dis_sch} ci permette di verificare che questa
+norma soddisfa la disuguaglianza triangolare (proprietà $3.$ della norma):
+\begin{align*}
+\|v + w\|^2 &= (v + w, v + w) = \|v\|^2 + (v, w) + (w, v) \|w\|^2 
+\leq \|v\|^2 + 2 \abs{(w, v)} + \|w\|^2 \\
+&\leq \|v\|^2 + 2 \|v\| \cdot \|w\| + \|w\|^2 = \left( \|v\| + \|w\| \right)^2
+\end{align*}
+\end{remark}
+Quindi uno spazio dotato di prodotto scalare è anche uno spazio normato.
+Se lo spazio è anche completo si chiama spazio di Hilbert
+$\left(\mathcal{H}\right)$. Un esempio di spazio di Hilbert è $\mathbb{C}^n$
+con il prodotto scalare $(z,w) = \sqrt{\sum_i z_i^\ast w_i}$
 
-
+\begin{theorem}[Regola del parallelogrammo]\label{th: parallelogram}
+Una norma indotta da un prodotto scalare soddisfa l'uguaglianza
+\[
+\|v - w\|^2 + \|v + w\|^2 = 2\|v\|^2 + 2\|w\|^2
+.\]
+detta regola del parallelogrammo.
+\end{theorem}
+\begin{proof}
+facendo il conto esplicito si annullano i termini misti del prodotto $(\, ,\,)$
+\begin{align*}
+	(v - w, v - w) + (v + w, v + w) = \|v\|^2 - (v, w) - (w, v) + \|w\|^2
+	+ \|v\|^2 + (v, w) + (w, v) + \|w\|^2	
+\end{align*}
 \end{proof}
 
-Quindi uno spazio dotato di prodotto scalare è anche uno spazio normato. Se lo spazio è anche completo si chiama spazio di Hilbert $\left(\mathcal{H}\right)$. Un esempio di spazio di Hilbert è $\mathbb{C}^n$ con il prodotto scalare $(z,w) = \sqrt{\sum_i z_i^\ast w_i}$
+\begin{remark}
+Se la regola sopra è soddisfatta, vale anche l'implicazione inversa del teorema
+\ref{th: parallelogram}: si può sempre trovare il prodotto scalare da cui la
+norma discende (Teorema di Von Neumann).
+\end{remark}
